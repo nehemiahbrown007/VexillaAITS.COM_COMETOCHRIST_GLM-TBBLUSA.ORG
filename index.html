@@ -14,36 +14,34 @@
             --legal-black: #050505;
         }
 
-        * { box-sizing: border-box; }
-        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: var(--marble-white); color: var(--legal-black); line-height: 1.8; scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--marble-white); color: var(--legal-black); line-height: 1.8; scroll-behavior: smooth; }
 
-        /* THE TIGHT COMMAND HEADER */
+        /* HEADER: ZERO DEAD SPACE - HEIGHT LOCKED TO LOGO */
         header {
             background: var(--legal-black);
-            color: white;
-            padding: 0 4%;
             position: sticky;
             top: 0;
             z-index: 2000;
-            display: flex;
-            align-items: flex-end; /* Aligns logo and nav to the bottom border */
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: end; /* Nav sits at the bottom */
             border-bottom: 6px solid var(--gold-leaf);
-            height: 320px; /* Locked to your perfect logo size */
+            height: 320px; /* Locked to your preferred logo size */
+            padding: 0 4%;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .header-logo-container { 
-            height: 100%; /* Fills the 320px header exactly */
+            height: 320px; /* Matches header exactly */
             display: flex; 
             align-items: center;
-            padding: 0;
         }
 
-        /* PERFECT SCALE LOGO WITH HEARTBEAT GLOW */
         .header-logo-container img { 
             height: 100%; 
             width: auto; 
+            display: block;
             filter: drop-shadow(0 0 10px var(--gold-glow));
             animation: logo-glow 4s infinite ease-in-out;
         }
@@ -54,21 +52,21 @@
             100% { filter: drop-shadow(0 0 5px var(--gold-glow)); }
         }
 
-        /* NAVIGATION ANCHORED TO BOTTOM RIGHT */
+        /* NAVIGATION: LOWER RIGHT SIDE */
         nav.top-nav { 
             display: flex; 
-            gap: 20px; 
-            padding-bottom: 15px; /* Sits right above the gold border */
+            gap: 25px; 
+            justify-content: flex-end;
+            padding-bottom: 15px; /* Minimal clearance from the gold border */
         }
         
         nav.top-nav a { 
             color: white; 
             text-decoration: none; 
             font-weight: 800; 
-            font-size: 0.8rem; 
+            font-size: 0.85rem; 
             text-transform: uppercase; 
             letter-spacing: 1.5px;
-            padding: 5px 0;
             transition: all 0.3s ease;
             border-bottom: 2px solid transparent;
         }
@@ -78,21 +76,23 @@
             border-bottom: 2px solid var(--gold-leaf);
         }
 
-        /* ENHANCED CONTENT SECTIONS */
+        /* HERO SECTION */
         .hero-cathedral {
             text-align: center;
-            padding: 140px 10%;
-            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('philadelphia-hall.jpg');
+            padding: 120px 10%;
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('philadelphia-hall.jpg');
             background-attachment: fixed;
             background-size: cover;
             border-bottom: 15px solid var(--gold-leaf);
         }
 
-        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin: 0; color: white; text-shadow: 0 4px 15px rgba(0,0,0,1); }
-        
+        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; color: white; text-shadow: 0 4px 15px rgba(0,0,0,1); }
+        .jurisdiction { color: var(--gold-leaf); letter-spacing: 5px; text-transform: uppercase; margin-top: 15px; font-weight: 600; }
+
+        /* THE TESTAMENT SCROLL */
         .scroll-box { 
             max-width: 1000px; 
-            margin: -80px auto 80px; 
+            margin: -60px auto 80px; 
             border: 2px solid var(--gold-leaf); 
             padding: 60px;
             background: white;
@@ -101,15 +101,9 @@
             z-index: 10;
         }
 
+        /* COVENANT TIERS */
         .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin: 50px 5%; }
-        
-        .tier-card {
-            background: white;
-            border: 1px solid #ddd;
-            transition: 0.4s;
-            cursor: pointer;
-            text-align: center;
-        }
+        .tier-card { background: white; border: 1px solid #ddd; transition: 0.4s; cursor: pointer; text-align: center; }
         .tier-card:hover { transform: translateY(-10px); border-color: var(--gold-leaf); }
         .tier-top { background: var(--legal-black); color: white; padding: 20px; border-bottom: 4px solid var(--gold-leaf); }
         .tier-body { padding: 30px; }
@@ -123,9 +117,10 @@
             text-align: center;
         }
 
-        @media (max-width: 1024px) {
-            header { height: auto; flex-direction: column; align-items: center; padding-bottom: 20px; }
-            nav.top-nav { padding-bottom: 0; margin-top: 10px; }
+        @media (max-width: 1100px) {
+            header { height: auto; display: block; text-align: center; padding: 20px 0; }
+            .header-logo-container { height: 200px; justify-content: center; margin-bottom: 20px; }
+            nav.top-nav { justify-content: center; }
         }
     </style>
 </head>
@@ -148,18 +143,18 @@
 <main>
     <section class="hero-cathedral">
         <h1>THE LEGAL-SPIRITUAL BRIDGE</h1>
-        <p style="color: var(--gold-leaf); letter-spacing: 5px; text-transform: uppercase; margin-top: 15px;">Philadelphia, PA • Civic Integrity • Divine Stewardship</p>
+        <p class="jurisdiction">Philadelphia, PA • Civic Integrity • Divine Stewardship</p>
     </section>
 
     <div class="scroll-box">
-        <h2 style="font-family: 'Playfair Display'; color: var(--liturgical-blue); text-align: center; font-size: 2.5rem;">Our Soulful Mandate</h2>
+        <h2 style="font-family: 'Playfair Display'; color: var(--liturgical-blue); text-align: center; font-size: 2.5rem; margin-bottom: 20px;">Our Soulful Mandate</h2>
         <p style="font-style: italic; border-left: 5px solid var(--gold-leaf); padding-left: 25px; font-size: 1.2rem; color: #333;">
             "We do not force the issue, for everyone is here to live. Our only mission is to make you aware and provide solutions that could possibly be the answer. Since we are in the position to help with our hands, we welcome you with both arms open."
         </p>
         <p style="margin-top: 25px;">We provide the <strong>Leadership and Mentoring Skills</strong> that keep underprivileged kids in urban environments safe and focused. We bridge the gap between Philadelphia's streets and the corporate boardrooms of the world through a Covenant of accountability.</p>
     </div>
 
-    <section id="covenant" style="padding: 40px 0;">
+    <section id="covenant" style="padding-bottom: 60px;">
         <h2 style="text-align: center; font-family: 'Playfair Display'; font-size: 2.5rem;">Covenant Tiers</h2>
         <div class="tier-grid">
             <div class="tier-card" onclick="location.href='tier-viability.html'">
@@ -198,7 +193,6 @@
     <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="Logo" style="height: 150px; filter: drop-shadow(0 0 10px var(--gold-leaf)); margin-bottom: 25px;">
     <p style="font-family: 'Playfair Display'; font-style: italic; font-size: 1.5rem; color: var(--gold-leaf);">"Teaching the Children to Write the Law, Not Break It."</p>
     <p><strong>TBBLUSA.INFO | PHILADELPHIA</strong></p>
-    <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 40px;">&copy; 2026 The Legal-Spiritual Bridge. All Rights Reserved.</p>
 </footer>
 
 </body>
