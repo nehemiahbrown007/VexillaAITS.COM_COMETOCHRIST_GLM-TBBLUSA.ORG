@@ -3,107 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CASTAISTARS | Mega-Registry</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Come to Christ | The Legal-Spiritual Bridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: #000; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.6; background-color: #fff; }
         
-        /* Mega-Hanging Logo Effect */
-        .mega-logo {
-            height: 300px; /* h-75 equivalent */
-            width: auto;
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.9));
-            z-index: 60;
-            position: relative;
-            top: 110px; /* Deep hang below the h-30 bar */
-        }
-        .mega-logo:hover {
-            transform: scale(1.02) translateY(15px);
-            filter: drop-shadow(0 0 50px rgba(0, 229, 255, 0.5));
-        }
+        /* Navigation */
+        nav { display: flex; justify-content: space-around; align-items: center; padding: 10px 5%; background: #fdfdfd; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; height: 60px; }
+        nav a { text-decoration: none; color: #2c3e50; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        
+        /* Hero Section */
+        .hero { text-align: center; padding: 60px 20px; background: linear-gradient(to bottom, #ffffff, #f9f9f9); }
+        .logo-placeholder { max-width: 400px; margin: 0 auto 30px; } /* Ensure logo is large as requested */
+        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #1a1a1a; margin: 0; }
+        .tagline { font-style: italic; color: #b08d57; font-size: 1.2rem; margin-top: 10px; }
 
-        .text-gradient {
-            background: linear-gradient(to right, #ffffff, #00e5ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .glass-panel {
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(30px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
+        /* The Message - MLK Style Soulful Prose */
+        .the-testament { max-width: 900px; margin: 60px auto; padding: 0 20px; text-align: center; }
+        .the-testament h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; border-bottom: 2px solid #b08d57; display: inline-block; padding-bottom: 10px; }
+        .prose { font-size: 1.25rem; font-weight: 300; text-align: justify; color: #444; }
+        .emphasize { color: #b08d57; font-weight: 700; }
+
+        /* Membership Tiers - The Covenant */
+        .covenant-section { background: #1a1a1a; color: #fff; padding: 80px 20px; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 40px auto; }
+        .tier-card { border: 1px solid #b08d57; padding: 30px; border-radius: 8px; transition: 0.3s; }
+        .tier-card:hover { background: #b08d5733; transform: translateY(-5px); }
+        .tier-card h3 { color: #b08d57; margin-bottom: 10px; }
+        .price { font-size: 1.5rem; font-weight: 700; margin: 15px 0; }
+
+        /* Footer */
+        footer { background: #000; color: #999; text-align: center; padding: 40px 20px; font-size: 0.9rem; }
+        .footer-logo { color: #fff; font-weight: 700; margin-bottom: 10px; display: block; }
     </style>
 </head>
-<body class="text-white overflow-x-hidden">
+<body>
 
-    <nav class="fixed w-full z-50 glass-panel">
-        <div class="max-w-7xl mx-auto px-6 h-32 flex items-center justify-between">
-            
-            <a href="index.html" class="flex items-center">
-                <img src="castaistars.png" alt="CASTAISTARS" class="mega-logo">
-            </a>
-            
-            <div class="hidden md:flex gap-12 text-[11px] font-black uppercase tracking-[0.5em] text-gray-500">
-                <a href="backlot.html" class="hover:text-cyan-400 transition-colors">Registry</a>
-                <a href="directors.html" class="hover:text-cyan-400 transition-colors">Directors</a>
-                <a href="creators.html" class="hover:text-cyan-400 transition-colors">Creators</a>
-            </div>
+<nav>
+    <a href="#mission">Our Mission</a>
+    <a href="#covenant">The Congregation</a>
+    <a href="#impact">Community Impact</a>
+    <a href="#partners">Government Partners</a>
+    <a href="https://tbblusa.org" target="_blank">TBBLUSA.ORG</a>
+</nav>
 
-            <a href="mailto:castaistars@outlook.com?subject=Beta Access Request" class="bg-cyan-500 text-black px-12 py-4 rounded-full font-black text-[11px] uppercase tracking-widest hover:bg-white transition-all shadow-lg">
-                Beta Access
-            </a>
+<section class="hero">
+    <div class="logo-placeholder">
+        <img src="your-logo-path.png" alt="The Legal-Spiritual Bridge Logo" style="width:100%; height:auto;">
+        <p><strong>COME TO CHRIST</strong></p>
+    </div>
+    <h1>The Legal-Spiritual Bridge</h1>
+    <p class="tagline">"Reconciling the Laws of God with the Laws of the State"</p>
+</section>
+
+<section id="mission" class="the-testament">
+    <h2>A Testament of the Helping Hand</h2>
+    <div class="prose">
+        <p>We come to you today not as men of force, but as men of <span class="emphasize">vision</span>. We stand in the gap—on that long, winding bridge between the sacred Laws of God and the necessary Laws of the State. We have seen our brothers and sisters falter in the shadows of recidivism, caught in a cycle that forgets the soul while punishing the body. But we believe there is a better way.</p>
+        
+        <p>Our promise is simple yet profound: We are here to provide the <span class="emphasize">solution</span>. We do not push; we invite. We do not demand; we demonstrate. Through the "Even God Organism," we function as a specialized organ of peace and restoration. We use the light of Christ to show that respecting the laws of our land is not a burden, but a civic duty born of spiritual love.</p>
+
+        <p>We grew up in these streets. We know these corners. We have felt the weight of the responsibility we now carry. And because we know where we come from, we know exactly where we are going. We invite you to join this fellowship—to be the hand that lifts, the heart that prays, and the mind that leads.</p>
+    </div>
+</section>
+
+<section id="covenant" class="covenant-section">
+    <h2>The Covenant of Stewardship</h2>
+    <p>A commitment to the community is a commitment to the future. Join our giving congregation.</p>
+    
+    <div class="grid">
+        <div class="tier-card">
+            <h3>Solid Ground</h3>
+            <p>The Foundation</p>
+            <div class="price">$0 - $50 / mo</div>
+            <p>The strength of our daily light.</p>
         </div>
-    </nav>
-
-    <section class="relative min-h-screen flex flex-col items-center justify-start pt-[450px] pb-32">
-        <div class="absolute inset-0 z-0 opacity-30">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-cyan-900/20 rounded-full mix-blend-screen filter blur-[180px]"></div>
+        <div class="tier-card">
+            <h3>Civic Leader</h3>
+            <p>The Bridge-Builder</p>
+            <div class="price">$100 - $200 / mo</div>
+            <p>Standing for those seeking a second chance.</p>
         </div>
-
-        <div class="relative z-10 text-center max-w-6xl px-6">
-            <h1 class="text-7xl md:text-[10rem] font-black tracking-tighter mb-12 leading-[0.75] uppercase">
-                FAME IS <span class="text-gradient">SYNTHETIC.</span>
-            </h1>
-            <p class="text-2xl md:text-3xl text-gray-400 mb-16 font-light max-w-3xl mx-auto tracking-widest uppercase italic">
-                The New Standard in AI Talent Management.
-            </p>
-            
-            <div class="flex flex-col md:flex-row gap-8 justify-center">
-                <a href="backlot.html" class="bg-white text-black px-16 py-7 rounded-2xl font-black text-2xl uppercase tracking-tighter hover:bg-cyan-400 transition-all text-center">
-                    Enter Backlot
-                </a>
-                <a href="creators.html" class="border-4 border-gray-900 hover:border-cyan-400 px-16 py-7 rounded-2xl font-black text-2xl uppercase tracking-tighter transition-all text-center">
-                    Register Star
-                </a>
-            </div>
+        <div class="tier-card">       
+            <h3>Community Steward</h3>
+            <p>The Helping Hand</p>
+            <div class="price">$300 - $500 / mo</div>
+            <p>Funding the mentoring of our youth.</p>
         </div>
-    </section>
-
-    <section class="max-w-7xl mx-auto px-6 py-40 border-t border-gray-900">
-        <div class="grid md:grid-cols-3 gap-16">
-            <div class="space-y-6">
-                <h3 class="text-cyan-400 font-black uppercase tracking-widest text-sm">01. Continuity</h3>
-                <p class="text-gray-500 text-lg">Consistent visual datasets for cinematic productions.</p>
-            </div>
-            <div class="space-y-6">
-                <h3 class="text-cyan-400 font-black uppercase tracking-widest text-sm">02. Audio Soul</h3>
-                <p class="text-gray-500 text-lg">Integrated Voice IDs secured via Solomon Kin Records.</p>
-            </div>
-            <div class="space-y-6">
-                <h3 class="text-cyan-400 font-black uppercase tracking-widest text-sm">03. IP Rights</h3>
-                <p class="text-gray-500 text-lg">Transparent royalty splits for the modern AI creator.</p>
-            </div>
+        <div class="tier-card">
+            <h3>Kingdom Pillar</h3>
+            <p>The Anchor</p>
+            <div class="price">$1,000+ / mo</div>
+            <p>Building the legacy of the Marble Pillars.</p>
         </div>
-    </section>
+    </div>
+    <p style="font-size: 0.8rem; opacity: 0.7;">Basic Viable Membership: $5/month. Commitments are voluntary and can be adjusted at any time.</p>
+</section>
 
-    <footer class="py-32 border-t border-gray-900 text-center">
-        <img src="castaistars.png" alt="CASTAISTARS" class="h-32 w-auto mx-auto mb-12 opacity-20 hover:opacity-100 transition-opacity">
-        <p class="text-gray-800 font-black uppercase tracking-[1.5em] text-[12px]">Solomon Kin Records LLC &bull; Philadelphia</p>
-        <a href="mailto:castaistars@outlook.com" class="text-gray-600 hover:text-cyan-400 text-xs mt-4 block uppercase tracking-widest">castaistars@outlook.com</a>
-    </footer>
+<section id="impact" class="the-testament">
+    <h3>Our Promise to the State & The Soul</h3>
+    <p>We are a viable nonprofit partner, ready for government engagement. We utilize every dollar to enrich community engagement, foster leadership skills, and secure grants that provide the scale our neighborhoods deserve. We know how to use the responsibility of the state wisely, because we serve a higher law first.</p>
+</section>
+
+<footer>
+    <span class="footer-logo">COME TO CHRIST | TBBL USA</span>
+    <p>The Spiritual & Rehabilitation Branch of Thin Black and Brown Line USA</p>
+    <p>WWW.TBBLUSA.INFO | WWW.TBBLUSA.ORG</p>
+    <p>&copy; 2026 The Legal-Spiritual Bridge. All Rights Reserved. Approved by Legal Dept.</p>
+</footer>
 
 </body>
 </html>
