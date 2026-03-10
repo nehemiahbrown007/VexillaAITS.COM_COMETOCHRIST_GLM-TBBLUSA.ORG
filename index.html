@@ -7,155 +7,227 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #b08d57;
-            --deep-blue: #1a2a40;
-            --marble: #f4f4f4;
-            --black: #0a0a0a;
-            --white: #ffffff;
+            --gold-leaf: #d4af37;
+            --liturgical-blue: #14213d;
+            --marble-white: #f8f9fa;
+            --legal-black: #000000;
+            --scripture-red: #8b0000;
         }
 
         * { box-sizing: border-box; }
-        body { margin: 0; font-family: 'Montserrat', sans-serif; color: var(--black); line-height: 1.8; background-color: var(--white); scroll-behavior: smooth; }
+        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: var(--white); color: var(--legal-black); overflow-x: hidden; }
         
-        /* SLIM NAVIGATION BAR */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; background: rgba(255,255,255,0.98); border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 1000; height: 70px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .nav-links { display: flex; gap: 20px; }
-        nav a { text-decoration: none; color: var(--deep-blue); font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; transition: color 0.3s; }
-        nav a:hover { color: var(--gold); }
+        /* CONSISTENT HEADER NAVIGATION */
+        header {
+            background: var(--legal-black);
+            color: white;
+            padding: 10px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 2000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--gold-leaf);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .header-logo-container { height: 80px; display: flex; align-items: center; }
+        .header-logo-container img { height: 100%; width: auto; max-width: 180px; }
+
+        nav.top-nav { display: flex; gap: 25px; }
+        nav.top-nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px;
+            transition: color 0.3s;
+        }
+        nav.top-nav a:hover { color: var(--gold-leaf); }
+
+        /* MOBILE MENU (Simplified for index) */
+        @media (max-width: 768px) {
+            nav.top-nav { display: none; } /* Implement a hamburger in production */
+            h1 { font-size: 2rem !important; }
+        }
+
+        /* HERO & THEOLOGICAL CONTRAST */
+        .hero-cathedral {
+            text-align: center;
+            padding: 100px 10%;
+            background: linear-gradient(rgba(20, 33, 61, 0.9), rgba(20, 33, 61, 0.9)), url('cathedral-marble-bg.jpg');
+            background-size: cover;
+            color: white;
+            border-bottom: 10px solid var(--gold-leaf);
+        }
+
+        .hero-cathedral h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin: 0; }
+        .hero-cathedral .jurisdiction { font-style: italic; color: var(--gold-leaf); font-size: 1.3rem; margin-top: 10px; }
+
+        /* THE MESSAGE: SPIRITUAL-LEGAL PROSE */
+        .testament-container { padding: 80px 15%; text-align: justify; background: var(--marble-white); }
+        .testament-container h2 { font-family: 'Playfair Display', serif; text-align: center; font-size: 2.5rem; color: var(--liturgical-blue); }
+        .jargon-bridge { font-size: 1.25rem; font-weight: 300; border-left: 5px solid var(--gold-leaf); padding-left: 30px; margin: 40px 0; }
+
+        /* MEMBERSHIP COVENANT TIERS */
+        .membership-section { padding: 100px 5%; text-align: center; }
+        .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
         
-        /* HERO SECTION - THE PILLAR AESTHETIC */
-        .hero { text-align: center; padding: 100px 20px; background: linear-gradient(180deg, var(--white) 0%, var(--marble) 100%); border-bottom: 1px solid #ddd; }
-        .logo-box { max-width: 500px; margin: 0 auto 20px; padding: 20px; }
-        .logo-img { width: 100%; height: auto; filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1)); }
-        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 10px 0; letter-spacing: -1px; }
-        .mission-badge { background: var(--gold); color: white; padding: 5px 15px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; display: inline-block; margin-bottom: 10px; }
+        .tier-card {
+            background: white;
+            border: 2px solid #eee;
+            padding: 50px 30px;
+            position: relative;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .tier-card:hover { transform: translateY(-10px); border-color: var(--gold-leaf); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .tier-card h3 { font-family: 'Playfair Display', serif; color: var(--liturgical-blue); font-size: 1.8rem; }
+        .tier-card .price { font-size: 2.5rem; font-weight: 700; color: var(--gold-leaf); margin: 20px 0; }
+        .tier-card .benefit-list { list-style: none; padding: 0; text-align: left; font-size: 0.9rem; margin-bottom: 30px; }
+        .tier-card .benefit-list li { margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
 
-        /* THE TESTAMENT SECTION */
-        .section-padding { padding: 100px 10%; }
-        .rhythmic-text { font-size: 1.4rem; font-family: 'Playfair Display', serif; font-style: italic; color: var(--deep-blue); text-align: center; max-width: 1000px; margin: 0 auto; }
-        
-        /* DASHBOARD GRID */
-        .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .card { background: var(--white); border: 1px solid #eee; padding: 40px; position: relative; overflow: hidden; border-top: 4px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-top: 0; }
-        .percentage-tag { font-size: 2.5rem; font-weight: 700; color: var(--gold); }
+        /* CORPORATE & YOUTH PROGRAMMING */
+        .corporate-urban { background: var(--liturgical-blue); color: white; padding: 80px 10%; text-align: center; }
+        .urban-initiatives { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        @media (max-width: 768px) { .urban-initiatives { grid-template-columns: 1fr; } }
 
-        /* THE COVENANT (MEMBERSHIP) */
-        .covenant { background: var(--black); color: var(--white); padding: 100px 5%; text-align: center; }
-        .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 50px; }
-        .tier { border: 1px solid rgba(176, 141, 87, 0.4); padding: 40px 20px; transition: 0.4s; }
-        .tier:hover { background: rgba(176, 141, 87, 0.1); border-color: var(--gold); }
-        .tier h4 { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; }
-        .commitment { font-size: 1.8rem; font-weight: 700; margin: 20px 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
-
-        /* GOVERNMENT & GRANT FOCUS */
-        .grant-focus { background: var(--deep-blue); color: white; }
-        .grant-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .grant-item { background: rgba(255,255,255,0.05); padding: 20px; border-left: 3px solid var(--gold); }
-
-        footer { background: #000; color: #888; text-align: center; padding: 60px 20px; border-top: 5px solid var(--gold); }
-        .helping-hand-call { font-size: 1.5rem; color: var(--white); margin-bottom: 30px; font-family: 'Playfair Display', serif; }
+        /* CONSISTENT FOOTER */
+        footer {
+            background: var(--legal-black);
+            color: #ccc;
+            padding: 80px 5% 40px;
+            border-top: 10px solid var(--gold-leaf);
+        }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 50px; }
+        .footer-links h5 { color: white; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        .footer-links a { display: block; color: #999; text-decoration: none; margin-bottom: 10px; font-size: 0.85rem; }
+        .footer-links a:hover { color: var(--gold-leaf); }
     </style>
 </head>
 <body>
 
-<nav>
-    <div class="logo-small"><strong>COME TO CHRIST</strong></div>
-    <div class="nav-links">
-        <a href="#mission">Our Testament</a>
-        <a href="#initiatives">Initiatives</a>
-        <a href="#governance">Government Engagement</a>
+<header>
+    <div class="header-logo-container">
+        <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST TBBLUSA.ORG Logo">
+    </div>
+    <nav class="top-nav">
+        <a href="#testament">The Testament</a>
         <a href="#covenant">The Congregation</a>
-        <a href="#grants">Grants & Contracts</a>
-    </div>
-</nav>
+        <a href="#urban">Urban Initiatives</a>
+        <a href="#partners">Government Partners</a>
+        <a href="https://tbblusa.org" target="_blank">Parent Org (TBBLUSA.ORG)</a>
+    </nav>
+</header>
 
-<section class="hero">
-    <span class="mission-badge">A Helping Hand for the Community</span>
-    <div class="logo-box">
-        <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST TBBLUSA.ORG" class="logo-img">
-    </div>
+<section class="hero-cathedral">
     <h1>The Legal-Spiritual Bridge</h1>
-    <p class="rhythmic-text">"Using the Laws of God to help people respect and love the Laws of the State."</p>
+    <p class="jurisdiction">Exercising Stewardship under the Laws of God and the Jurisdiction of the State.</p>
 </section>
 
-<section id="mission" class="section-padding">
-    <div class="prose" style="max-width: 800px; margin: 0 auto; text-align: justify; font-size: 1.2rem;">
-        <p>We are not a force of coercion; we are a force of <strong>reconciliation</strong>. Our organization keeps its promises because our foundations are carved in the marble of civic alignment and divine wisdom. We provide the solution because we lived the problem. We offer a dual-lens approach to rehabilitation—targeting recidivism not through fear, but through the fulfillment of one’s identity as both a child of God and a citizen of the State.</p>
-        
-        <div class="card" style="margin-top: 40px; text-align: center;">
-            <span class="percentage-tag">30%</span>
-            <h3>The Stewardship Pledge</h3>
-            <p>We believe in funding our own resurrection. <strong>30% of all profits</strong> from our corporate business arms are directly funneled back into this nonprofit mission to fund activities, community improvements, and spiritual rehabilitation.</p>
-        </div>
+<section id="testament" class="testament-container">
+    <h2>A Soulful Mandate for Community Restoration</h2>
+    <div class="jargon-bridge">
+        "We are here to live, but we are also here to <strong>uphold</strong>. Our organization keeps its promises because a covenant without works is a breach of both divine and civil duty. We do not force the issue; we present the <em>Evidence of a Better Way</em>. We provide the Solution (the Answer) to the recidivism that plagues our brothers. We are a helping hand with both arms open—welcoming you into a fellowship where the spirit is fed and the civic record is redeemed."
     </div>
+    <p>We stand at a critical level of community involvement. <strong>Come to Christ</strong> is not merely a church; it is a spiritual corporation for community improvement. We have built a spot where corporate giants looking for laborers with heart can find our members. We specialize in the <strong>Leadership and Mentoring Skills</strong> that keep underprivileged kids in urban environments safe, focused, and prepared for high-level success. This is our testament. This is our helping hand.</p>
 </section>
 
-<section id="initiatives" class="section-padding" style="background: var(--marble);">
-    <h2 style="text-align:center; font-family: 'Playfair Display'; font-size: 2.5rem;">Community Engagement Initiatives</h2>
-    <div class="dashboard">
-        <div class="card">
-            <h3>Leadership Mentoring</h3>
-            <p>Teaching the skills of the state to the hearts of the community. We involve ourselves in the community we grew up in to build the leaders of tomorrow.</p>
-        </div>
-        <div class="card">
-            <h3>Fellowship Events</h3>
-            <p>Weekly gatherings in prayer and thought, ensuring that the "Helping Hand" is always open and welcoming to those seeking a better way.</p>
-        </div>
-        <div class="card">
-            <h3>Civic Alignment Projects</h3>
-            <p>Direct action to improve local infrastructure and fund community activities that foster respect for the law and love for the neighbor.</p>
-        </div>
-    </div>
-</section>
-
-<section id="governance" class="section-padding grant-focus">
-    <h2 style="font-family: 'Playfair Display';">Governmental & Nonprofit Engagements</h2>
-    <p>We aim to assist and partner with 20+ nonprofits to win contracts that serve the public good. We match our mission with theirs to create an unbreakable chain of community support.</p>
-    
-    <div class="grant-list">
-        <div class="grant-item"><strong>Second Chance Act (SCA):</strong> Focusing on recidivism through spiritual and legal bridge-building.</div>
-        <div class="grant-item"><strong>CDBG Programs:</strong> To enrich the physical and social engagement of the neighborhoods we serve.</div>
-        <div class="grant-item"><strong>Justice & Mental Health:</strong> Aligning mental wellness with spiritual pathing.</div>
-        <div class="grant-item"><strong>SBA Nonprofit Outreach:</strong> Recognized as a small business nonprofit dedicated to community enrichment.</div>
-    </div>
-</section>
-
-<section id="covenant" class="covenant">
-    <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem;">The Covenant of Stewardship</h2>
-    <p>Your commitment is your testament. We offer a fair and open walk—adjust or cancel at any time.</p>
+<section id="covenant" class="membership-section">
+    <h2>The Congregation: Membership Tiers</h2>
+    <p>Select your level of commitment. Each tier represents a specific stewardship role within our organization.</p>
     
     <div class="tier-grid">
-        <div class="tier">
-            <h4>Solid Ground</h4>
-            <div class="commitment">$0 - $50</div>
-            <p>Standard Membership</p>
+        <div class="tier-card" onclick="location.href='tier-free.html';">
+            <h3>Viable Member</h3>
+            <div class="price">$0 / mo</div>
+            <ul class="benefit-list">
+                <li>Fellowship & Church Access</li>
+                <li>Community Event Invitation</li>
+                <li>Basic Mentorship Circle</li>
+                <li><strong>Join the Helping Hand</strong></li>
+            </ul>
+            <p>Free Entry Tier</p>
         </div>
-        <div class="tier">
-            <h4>Civic Leader</h4>
-            <div class="commitment">$100 - $200</div>
-            <p>Community Catalyst</p>
+
+        <div class="tier-card" onclick="location.href='tier-level2.html';">
+            <h3>Civic Leader</h3>
+            <div class="price">$100 - $200</div>
+            <ul class="benefit-list">
+                <li>Corporate Job Placement Priority</li>
+                <li>Event Decision-Making Vote</li>
+                <li>Local Community Planning Seat</li>
+                <li><strong>Bridge-Builder Status</strong></li>
+            </ul>
         </div>
-        <div class="tier">
-            <h4>Community Steward</h4>
-            <div class="commitment">$300 - $500</div>
-            <p>Mission Pillar</p>
+
+        <div class="tier-card" onclick="location.href='tier-level3.html';">
+            <h3>Community Steward</h3>
+            <div class="price">$300 - $500</div>
+            <ul class="benefit-list">
+                <li>Youth Mentoring Oversight</li>
+                <li>Grant-Project Lead Opportunity</li>
+                <li>Vested Rights in Fellowship Hall</li>
+                <li><strong>Steward of the Soul</strong></li>
+            </ul>
         </div>
-        <div class="tier">
-            <h4>Kingdom Pillar</h4>
-            <div class="commitment">$1,000+</div>
-            <p>Founder's Circle</p>
+
+        <div class="tier-card" onclick="location.href='tier-level4.html';">
+            <h3>Kingdom Pillar</h3>
+            <div class="price">$1,000+</div>
+            <ul class="benefit-list">
+                <li>Founding Member Recognition</li>
+                <li>Direct Partnership with TBBL USA Execs</li>
+                <li>Legacy Endowment Seat</li>
+                <li><strong>Anchor of the Bridge</strong></li>
+            </ul>
         </div>
     </div>
-    <p style="margin-top: 30px; opacity: 0.6;">A monthly donation of $5 ensures your status as a viable member of our giving community.</p>
+</section>
+
+<section id="urban" class="corporate-urban">
+    <h2>Corporate Synergy & Urban Resilience</h2>
+    <p>We bridge the gap between "Underprivileged" and "High Performance."</p>
+    <div class="urban-initiatives">
+        <div style="border: 1px solid var(--gold-leaf); padding: 30px;">
+            <h3>Employer Fellowship</h3>
+            <p>We partner with companies to place our vetted, resilient members into careers. We don't just find jobs; we create professional congregations in the workplace.</p>
+        </div>
+        <div style="border: 1px solid var(--gold-leaf); padding: 30px;">
+            <h3>Urban Defense Mentoring</h3>
+            <p>Specialized programs for kids in tough urban environments. We provide a level of mentoring that ensures they don't just survive—they lead.</p>
+        </div>
+    </div>
 </section>
 
 <footer>
-    <p class="helping-hand-call">"Since we are in the position to help with our hands, we welcome you with both arms open."</p>
-    <p><strong>COME TO CHRIST TBBL PROJECT</strong> | A Subsidiary of TBBLUSA.ORG</p>
-    <p>LEGAL DEPT APPROVED | REGISTERED NONPROFIT ORGANIZATION</p>
-    <p>WWW.TBBLUSA.INFO | WWW.TBBLUSA.ORG</p>
-    <p>&copy; 2026 The Legal-Spiritual Bridge. This is our promise. This is our testament.</p>
+    <div class="footer-grid">
+        <div class="footer-links">
+            <h5>Navigation</h5>
+            <a href="#testament">The Testament</a>
+            <a href="#covenant">Membership Tiers</a>
+            <a href="#urban">Youth Programs</a>
+            <a href="#partners">Grants & Contracts</a>
+        </div>
+        <div class="footer-links">
+            <h5>Legal & Spiritual</h5>
+            <a href="#">Terms of Covenant</a>
+            <a href="#">Privacy of the Soul</a>
+            <a href="#">Board of Directors</a>
+            <a href="#">Approved by Legal Dept</a>
+        </div>
+        <div class="footer-links" style="grid-column: span 2;">
+            <h5>Contact the Bridge</h5>
+            <p>Since we are in the position to help with our hands, we welcome you with both arms open.</p>
+            <p><strong>TBBLUSA.INFO | TBBLUSA.ORG</strong></p>
+        </div>
+    </div>
+    <div style="text-align: center; border-top: 1px solid #333; padding-top: 20px;">
+        <p>&copy; 2026 The Legal-Spiritual Bridge: Come to Christ Project. All Rights Reserved. A Helping Hand for a Hurting Community.</p>
+    </div>
 </footer>
 
 </body>
