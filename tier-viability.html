@@ -3,191 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covenant Viability & Stewardship | TBBLUSA.INFO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Covenant Viability & Divine Adherence | TBBLUSA.INFO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold-leaf: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
             --liturgical-blue: #0a192f;
-            --marble-white: #fcfcfc;
             --legal-black: #050505;
+            --marble-white: #f8f9fa;
         }
 
-        * { box-sizing: border-box; }
-        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: var(--marble-white); color: var(--legal-black); line-height: 1.8; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: url('https://www.transparenttextures.com/patterns/white-marble.png'), var(--marble-white);
+            color: var(--legal-black); 
+            line-height: 1.8; 
+            scroll-behavior: smooth; 
+        }
 
-        /* PERSISTENT CROWN HEADER */
+        /* ULTRA-SLIM CATHEDRAL HEADER */
         header {
             background: var(--legal-black);
-            color: white;
-            padding: 10px 0 0 0;
             position: sticky;
             top: 0;
-            z-index: 2000;
+            z-index: 3000;
             display: flex;
-            flex-direction: column;
+            justify-content: flex-end; /* Nav pushed to the right */
             align-items: center;
-            border-bottom: 6px solid var(--gold-leaf);
-            min-height: 220px;
+            border-bottom: 4px solid var(--gold-leaf);
+            height: 60px; /* SLIMMEST POSSIBLE BAR */
+            padding: 0 5%;
         }
-        .header-logo-container { height: 160px; display: flex; justify-content: center; align-items: center; }
-        .header-logo-container img { height: 100%; width: auto; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4)); }
+
+        .floating-logo-anchor { 
+            position: absolute;
+            left: 5%;
+            top: 0;
+            height: 0; /* Logo does not affect header height */
+        }
+
+        .floating-logo-anchor img { 
+            height: 320px; /* PRESERVED SIZE */
+            width: auto; 
+            filter: drop-shadow(0 0 15px var(--gold-glow));
+            animation: logo-glow 5s infinite ease-in-out;
+            pointer-events: auto;
+        }
+
+        @keyframes logo-glow {
+            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); transform: scale(1); }
+            50% { filter: drop-shadow(0 0 25px var(--gold-leaf)); transform: scale(1.02); }
+        }
+
+        nav.top-nav { display: flex; gap: 30px; }
+        nav.top-nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            font-family: 'Cinzel', serif;
+            transition: 0.3s;
+        }
+        nav.top-nav a:hover { color: var(--gold-leaf); text-shadow: 0 0 8px var(--gold-leaf); }
+
+        /* HERO SECTION: THE SANCTUARY OF LAW */
+        .sanctuary-hero {
+            padding: 260px 10% 120px; /* Padded for floating logo */
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('cathedral-court.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+            border-bottom: 10px solid var(--gold-leaf);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%); /* Arch-like shape */
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; color: white; letter-spacing: 4px; margin-bottom: 10px; }
+        .motto { font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold-leaf); font-size: 1.5rem; }
+
+        /* THE VIABILITY MANIFESTO */
+        .manifesto-container { max-width: 1200px; margin: -50px auto 80px; padding: 0 20px; position: relative; z-index: 10; }
         
-        nav.top-nav { display: flex; gap: 15px; padding: 15px 0; }
-        nav.top-nav a { color: white; text-decoration: none; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.2px; padding: 5px 12px; }
-
-        .hero-banner { background: var(--liturgical-blue); color: white; padding: 80px 10%; text-align: center; border-bottom: 10px solid var(--gold-leaf); }
-        .hero-banner h1 { font-family: 'Playfair Display'; font-size: 3rem; margin: 0; }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-
-        /* THE DOCTRINE OF ADHERENCE */
-        .doctrine-box {
+        .parchment-card {
             background: white;
-            border: 2px solid var(--gold-leaf);
-            padding: 50px;
-            margin-bottom: 60px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border: 1px solid var(--gold-leaf);
+            padding: 60px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            border-radius: 4px;
             position: relative;
         }
-        .doctrine-box h2 { font-family: 'Playfair Display'; color: var(--liturgical-blue); text-align: center; }
-        .doctrine-box blockquote { font-style: italic; font-size: 1.2rem; border-left: 5px solid var(--gold-leaf); padding-left: 20px; margin: 30px 0; }
-
-        /* ENHANCED TIER BREAKDOWN */
-        .tier-detail-card {
-            background: white;
-            margin-bottom: 40px;
-            border: 1px solid #eee;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 300px 1fr;
+        .parchment-card::before {
+            content: "⚖";
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 3rem;
+            color: rgba(212, 175, 55, 0.2);
         }
-        .tier-sidebar { background: var(--legal-black); color: white; padding: 40px; text-align: center; border-right: 5px solid var(--gold-leaf); }
-        .tier-content { padding: 40px; }
-        .tier-amount { font-family: 'Playfair Display'; font-size: 3rem; color: var(--gold-leaf); font-weight: 900; margin: 10px 0; }
-        
-        .impact-list { list-style: none; padding: 0; }
-        .impact-list li { margin-bottom: 15px; padding-left: 25px; position: relative; }
-        .impact-list li::before { content: '◈'; position: absolute; left: 0; color: var(--gold-leaf); }
 
-        .philly-defenders { background: var(--liturgical-blue); color: white; padding: 60px; margin-top: 60px; text-align: center; }
+        .section-title { 
+            font-family: 'Cinzel', serif; 
+            font-size: 2.2rem; 
+            text-align: center; 
+            color: var(--liturgical-blue);
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--gold-leaf);
+            display: inline-block;
+            width: 100%;
+        }
 
-        footer { background: var(--legal-black); color: white; padding: 60px 5%; text-align: center; border-top: 10px solid var(--gold-leaf); }
+        /* TIERS: STAINED GLASS STYLE */
+        .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
         
-        @media (max-width: 768px) { .tier-detail-card { grid-template-columns: 1fr; } }
+        .tier-arch {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ddd;
+            padding: 40px 20px;
+            text-align: center;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 150px 150px 0 0; /* CATHEDRAL ARCH SHAPE */
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .tier-arch:hover { 
+            transform: translateY(-15px); 
+            border-color: var(--gold-leaf); 
+            background: white; 
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+        }
+        .tier-arch h3 { font-family: 'Cinzel', serif; color: var(--liturgical-blue); margin-top: 20px; letter-spacing: 2px; }
+        .gold-divider { width: 50px; height: 2px; background: var(--gold-leaf); margin: 20px auto; }
+        .amount { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--gold-leaf); }
+
+        /* THE QUOTE BLOCK */
+        .divine-quote {
+            margin: 80px 0;
+            padding: 40px;
+            background: var(--liturgical-blue);
+            color: white;
+            border-left: 10px solid var(--gold-leaf);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        footer {
+            background: var(--legal-black);
+            color: white;
+            padding: 80px 5%;
+            text-align: center;
+            border-top: 10px solid var(--gold-leaf);
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-logo-container">
-        <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST TBBLUSA.ORG Logo">
+    <div class="floating-logo-anchor">
+        <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST Logo">
     </div>
+    
     <nav class="top-nav">
         <a href="index.html">Testament</a>
-        <a href="index.html#covenant">Covenant Tiers</a>
-        <a href="urban-initiatives.html">Urban Engagement</a> 
-        <a href="partnerships.html">Grant Governance</a>
-        <a href="https://tbblusa.org">Main Foundation</a>
+        <a href="index.html#covenant">Covenant</a>
+        <a href="urban-initiatives.html">Engagement</a> 
+        <a href="partnerships.html">Governance</a>
+        <a href="https://tbblusa.org" target="_blank">Foundation</a>
     </nav>
 </header>
 
-<section class="hero-banner">
-    <h1>Civic & Spiritual Stewardship</h1>
-    <p>Adhering to the Law: The Lifeline of Our Community</p>
+<section class="sanctuary-hero">
+    <h1>Civic & Spiritual Adherence</h1>
+    <p class="motto">"Teaching the Children to Write the Law, Not Break It."</p>
 </section>
 
-<div class="container">
-    
-    <section class="doctrine-box">
-        <h2>The Doctrine of Adherence</h2>
-        <blockquote>
-            "Coming to Christ is not a mere religious act—it is an act of Adherence. Just as we adhere to the Governmental Laws of the United States of America for the sake of civic order, we adhere to the Spiritual Laws of Christ for the sake of communal peace. Adhering to civilian leadership is the only way to heal our urban environments. The best people to lead this charge are the ones who have been through it themselves—those who have learned from the struggle and now see through the struggle to the solution."
-        </blockquote>
-        <p>Our vision is to defend Philadelphia and the entire Commonwealth of Pennsylvania. This defense is our lifeline. We depend on the commitment of our congregation to fund the support systems that our urban centers need most.</p>
-    </section>
-
-    <div class="tier-detail-card">
-        <div class="tier-sidebar">
-            <h3>SOLID GROUND</h3>
-            <div class="tier-amount">$0 - $50</div>
-            <p>Fellowship Entry</p>
-        </div>
-        <div class="tier-content">
-            <h4>Support Target: Local Civic Reentry</h4>
-            <p>Your commitment at this level funds our initial engagement with nonprofits like **The Philadelphia Youth Network**. We use these funds to facilitate free community feasts where legal aid and spiritual counseling meet.</p>
-            <ul class="impact-list">
-                <li>Funding for bi-weekly Urban Mentoring sessions.</li>
-                <li>Sponsorship of "Civic Literacy" workshops for at-risk teens.</li>
-                <li>Direct support for local homeless outreach through the "Helping Hand" network.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="tier-detail-card">
-        <div class="tier-sidebar">
-            <h3>CIVIC LEADER</h3>
-            <div class="tier-amount">$100 - $200</div>
-            <p>Decision Maker</p>
-        </div>
-        <div class="tier-content">
-            <h4>Support Target: Legislative Awareness</h4>
-            <p>Raising funds to support the **Young Politicians™** initiative and our partnership with the **Urban League of Philadelphia**. Leaders at this level decide which local Philly parks and blocks receive restoration funding.</p>
-            <ul class="impact-list">
-                <li>Deciding events for our local community (Street Fairs, Peace Marches).</li>
-                <li>Funding for "Law of the State" seminars led by legal professionals.</li>
-                <li>Resources for the "Employer Fellowship" recruitment drive.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="tier-detail-card">
-        <div class="tier-sidebar">
-            <h3>STEWARD</h3>
-            <div class="tier-amount">$300 - $500</div>
-            <p>Oversight Officer</p>
-        </div>
-        <div class="tier-content">
-            <h4>Support Target: Grant Governance</h4>
-            <p>This tier supports the administrative engine required to work with the **Pennsylvania Commission on Crime and Delinquency (PCCD)**. We are supporting the "Bridge-Gate" program, bringing trade schools and corporate tech training into the inner city.</p>
-            <ul class="impact-list">
-                <li>Direct oversight of nonprofit engagement targets.</li>
-                <li>Management of the 30% Profit-to-Mission disbursement.</li>
-                <li>Founding of the "Safe Corridor" patrols in high-risk zones.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="tier-detail-card">
-        <div class="tier-sidebar">
-            <h3>PILLAR</h3>
-            <div class="tier-amount">$1,000+</div>
-            <p>Executive Pillar</p>
-        </div>
-        <div class="tier-content">
-            <h4>Support Target: The State Lifeline</h4>
-            <p>Pillars provide the capital to scale our programs across the state of Pennsylvania. You are supporting the defense of our vision at the highest level—partnering with the **Department of Justice (DOJ)** to bring $1M+ contracts to our communities.</p>
-            <ul class="impact-list">
-                <li>Endowment of the Young Politicians™ Academy building.</li>
-                <li>Lifetime legacy affiliation with TBBLUSA.ORG.</li>
-                <li>Strategic planning for state-wide urban defense initiatives.</li>
-            </ul>
-        </div>
-    </div>
-
-    <section class="philly-defenders">
-        <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; color: var(--gold-leaf);">DEFENDING OUR LIFELINE</h2>
-        <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
-            "We have learned to see through the pain to the potential. Our congregation is the civilian leadership Philadelphia has been waiting for. We are not just raising money; we are raising the standard of life."
+<div class="manifesto-container">
+    <div class="parchment-card">
+        <h2 class="section-title">The Doctrine of Viability</h2>
+        
+        <p style="text-align: center; font-size: 1.1rem; color: #444; max-width: 800px; margin: 0 auto 40px;">
+            The union of <strong>Church and State</strong> begins within the heart of the individual. At TBBLUSA, we believe that adhering to God's Law is the spiritual mirror of adhering to the Laws of our Republic. We are raising the standard of leadership in Philadelphia by empowering those who have survived the furnace of the streets to become the stewards of the city.
         </p>
-    </section>
 
+        <div class="tier-grid">
+            <div class="tier-arch">
+                <h3>Solid Ground</h3>
+                <div class="gold-divider"></div>
+                <div class="amount">$0 - $50</div>
+                <p style="font-size: 0.8rem; text-transform: uppercase; margin-top: 15px;">Community Fellowship</p>
+                <p style="margin-top: 15px;">Entry into the congregation and basic civic literacy mentoring.</p>
+            </div>
+
+            <div class="tier-arch">
+                <h3>Civic Leader</h3>
+                <div class="gold-divider"></div>
+                <div class="amount">$100 - $200</div>
+                <p style="font-size: 0.8rem; text-transform: uppercase; margin-top: 15px;">Decision Power</p>
+                <p style="margin-top: 15px;">Empowerment to vote on local urban restoration initiatives.</p>
+            </div>
+
+            <div class="tier-arch">
+                <h3>Steward</h3>
+                <div class="gold-divider"></div>
+                <div class="amount">$300 - $500</div>
+                <p style="font-size: 0.8rem; text-transform: uppercase; margin-top: 15px;">Grant Governance</p>
+                <p style="margin-top: 15px;">Active oversight of nonprofit ally partnerships and grant allocation.</p>
+            </div>
+
+            <div class="tier-arch">
+                <h3>Kingdom Pillar</h3>
+                <div class="gold-divider"></div>
+                <div class="amount">$1,000+</div>
+                <p style="font-size: 0.8rem; text-transform: uppercase; margin-top: 15px;">Legacy Founding</p>
+                <p style="margin-top: 15px;">Direct affiliation with the Executive Board of TBBLUSA.ORG.</p>
+            </div>
+        </div>
+
+        <div class="divine-quote">
+            "We do not force the issue, for everyone is here to live... Since we are in the position to help with our hands, we welcome you with both arms open."
+        </div>
+
+        <h3 style="font-family: 'Cinzel'; color: var(--liturgical-blue); text-align: center;">Our State-Wide Vision</h3>
+        <p style="margin-top: 20px; text-align: center;">
+            Every dollar raised through these Covenant Tiers is a direct lifeline for Philadelphia. We are funding the <strong>Young Politicians™</strong> curriculum, the <strong>Helping Hand</strong> reentry programs, and our collaboration with 20 primary nonprofit allies to defend the vision of a safe, prosperous Pennsylvania.
+        </p>
+    </div>
 </div>
 
+
+
 <footer>
-    <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="Logo" style="height: 120px; margin-bottom: 20px;">
-    <p style="font-style: italic;">"Since we are in the position to help with our hands, we welcome you with both arms open."</p>
-    <p>&copy; 2026 TBBLUSA.INFO | Philanthropic Adherence Division</p>
+    <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="Logo" style="height: 120px; filter: drop-shadow(0 0 10px var(--gold-leaf));">
+    <p style="font-family: 'Cinzel'; letter-spacing: 2px; margin-top: 20px;">TBBLUSA.INFO | PHILADELPHIA | DIVINE JURISDICTION</p>
 </footer>
 
 </body>
