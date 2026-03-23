@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Compliance & Audit | TBBLUSA.ORG Philadelphia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-leaf: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --liturgical-blue: #0a192f;
+            --legal-black: #050505;
+            --marble-white: #f8f9fa;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: url('https://www.transparenttextures.com/patterns/white-marble.png'), var(--marble-white);
+            color: var(--legal-black); 
+            line-height: 1.8; 
+        }
+
+        /* PERSISTENT ULTRA-SLIM HEADER (60PX) */
+        header {
+            background: var(--legal-black);
+            position: sticky;
+            top: 0;
+            z-index: 3000;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 4px solid var(--gold-leaf);
+            height: 60px; 
+            padding: 0 5%;
+        }
+
+        .floating-logo-anchor { 
+            position: absolute;
+            left: 5%;
+            top: 0;
+            height: 0; 
+        }
+
+        .floating-logo-anchor img { 
+            height: 320px; 
+            width: auto; 
+            filter: drop-shadow(0 0 15px var(--gold-glow));
+            animation: divine-glow 5s infinite ease-in-out;
+        }
+
+        @keyframes divine-glow {
+            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); transform: translateY(0); }
+            50% { filter: drop-shadow(0 0 30px var(--gold-leaf)); transform: translateY(5px); }
+        }
+
+        nav.top-nav { display: flex; gap: 30px; }
+        nav.top-nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 0.7rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2.5px;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* HERO: THE CHAMBER OF RECORDS */
+        .audit-hero {
+            padding: 280px 10% 120px;
+            background: linear-gradient(rgba(10, 25, 47, 0.94), rgba(10, 25, 47, 0.94)), url('philly-law-library.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+            border-bottom: 12px solid var(--gold-leaf);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; color: white; letter-spacing: 4px; }
+        .seal-sub { font-family: 'Playfair Display', serif; color: var(--gold-leaf); font-size: 1.4rem; font-style: italic; margin-top: 10px; }
+
+        .audit-container { max-width: 1100px; margin: -50px auto 100px; padding: 0 20px; position: relative; z-index: 10; }
+        
+        .legal-parchment {
+            background: white;
+            border: 1px solid var(--gold-leaf);
+            padding: 80px 60px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .cert-card {
+            border-left: 4px solid var(--gold-leaf);
+            padding: 25px;
+            background: var(--marble-white);
+        }
+        .cert-card h3 { font-family: 'Cinzel'; font-size: 1rem; color: var(--liturgical-blue); margin-bottom: 10px; }
+        .cert-card p { font-size: 0.85rem; }
+
+        .notary-seal {
+            border: 2px solid var(--gold-leaf);
+            padding: 40px;
+            margin-top: 60px;
+            text-align: center;
+            font-family: 'Cinzel';
+            color: var(--liturgical-blue);
+        }
+
+        footer {
+            background: var(--legal-black);
+            color: white;
+            padding: 100px 5% 50px;
+            text-align: center;
+            border-top: 15px solid var(--gold-leaf);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="floating-logo-anchor">
+        <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST Logo">
+    </div>
+    
+    <nav class="top-nav">
+        <a href="index.html">The Testament</a>
+        <a href="tier-viability.html">Covenant Tiers</a>
+        <a href="urban-initiatives.html">Urban Engagement</a> 
+        <a href="partnerships.html">Governance</a>
+        <a href="stewardship-portal.html">Impact Data</a>
+    </nav>
+</header>
+
+<section class="audit-hero">
+    <h1>LEGAL COMPLIANCE</h1>
+    <p class="seal-sub">"Our Word is our Bond. Our Covenant is our Contract."</p>
+</section>
+
+<div class="audit-container">
+    <div class="legal-parchment">
+        <h2 style="font-family: 'Cinzel'; text-align: center; color: var(--liturgical-blue); font-size: 2.2rem;">The Pillar of Certification</h2>
+        
+        <p style="margin-top: 30px; font-size: 1.1rem; text-align: center; font-style: italic;">
+            "Coming to Christ requires an adherence that mirrors the civilian leadership found in the United States of America. We certify that our organization meets the rigorous standards of both spiritual stewardship and governmental accountability."
+        </p>
+
+        <div class="compliance-grid">
+            <div class="cert-card">
+                <h3>30% Profit-to-Mission Integrity</h3>
+                <p>We certify that 30% of all corporate-level profits are audited and allocated to nonprofit initiatives, community engagement, and urban defense targets as a primary lifeline.</p>
+            </div>
+            <div class="cert-card">
+                <h3>Young Politicians™ Trademark</h3>
+                <p>Exclusive curriculum rights and trademarked intellectual property held by TBBLUSA.ORG for the training of urban youth in legislative literacy and civic adherence.</p>
+            </div>
+            <div class="cert-card">
+                <h3>Nonprofit Partnership Governance</h3>
+                <p>Ongoing MOU (Memorandum of Understanding) adherence with 20 primary allies to ensure all grant funds are utilized with a "Solid Foundation" approach.</p>
+            </div>
+            <div class="cert-card">
+                <h3>Urban Defense Vetting</h3>
+                <p>Rigorous background alignment and mentoring certification for all members in the Fellowship, ensuring a workforce of integrity for corporate partners.</p>
+            </div>
+        </div>
+
+        <div class="notary-seal">
+            <h3 style="letter-spacing: 5px;">VERIFIED FOR GRANT READINESS</h3>
+            <p style="margin-top: 10px; font-family: 'Montserrat'; font-weight: 300;">Philadelphia Division • Commonwealth of Pennsylvania • DOJ / SBA Ready</p>
+        </div>
+
+        <p style="text-align: center; margin-top: 50px; font-family: 'Playfair Display'; font-style: italic; font-size: 1.2rem;">
+            "We have learned to see through the furnace to the solution. Support in these areas is the most important thing a city needs. We provide it with both arms open."
+        </p>
+    </div>
+</div>
+
+<footer>
+    <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="Logo" style="height: 140px; filter: drop-shadow(0 0 15px var(--gold-leaf)); margin-bottom: 30px;">
+    <p style="font-family: 'Cinzel'; letter-spacing: 3px; font-size: 1.5rem;">TBBLUSA.INFO | LEGAL DIVISION</p>
+    <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 30px;">DOCUMENT CERTIFIED MARCH 2026 | ALL RIGHTS RESERVED TBBLUSA.ORG</p>
+</footer>
+
+</body>
+</html>
