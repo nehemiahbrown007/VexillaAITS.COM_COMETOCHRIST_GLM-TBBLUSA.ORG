@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Citizen Joe | Humanitarian Engagement | TBBLUSA.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-leaf: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --liturgical-blue: #0a192f;
+            --legal-black: #050505;
+            --marble-white: #f8f9fa;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: url('https://www.transparenttextures.com/patterns/white-marble.png'), var(--marble-white);
+            color: var(--legal-black); 
+            line-height: 1.8; 
+        }
+
+        /* PERSISTENT ULTRA-SLIM HEADER (60PX) */
+        header {
+            background: var(--legal-black);
+            position: sticky;
+            top: 0;
+            z-index: 3000;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 4px solid var(--gold-leaf);
+            height: 60px; 
+            padding: 0 5%;
+        }
+
+        .floating-logo-anchor { 
+            position: absolute;
+            left: 5%;
+            top: 0;
+            height: 0; 
+        }
+
+        .floating-logo-anchor img { 
+            height: 320px; 
+            width: auto; 
+            filter: drop-shadow(0 0 15px var(--gold-glow));
+            animation: divine-glow 5s infinite ease-in-out;
+        }
+
+        @keyframes divine-glow {
+            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); transform: translateY(0); }
+            50% { filter: drop-shadow(0 0 30px var(--gold-leaf)); transform: translateY(5px); }
+        }
+
+        nav.top-nav { display: flex; gap: 30px; }
+        nav.top-nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 0.7rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2.5px;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* HERO: THE STREET-LEVEL SANCTUARY */
+        .joe-hero {
+            padding: 280px 10% 120px;
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('urban-neighborhood-sunlight.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+            border-bottom: 12px solid var(--gold-leaf);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; color: white; letter-spacing: 5px; }
+        .joe-sub { font-family: 'Playfair Display', serif; color: var(--gold-leaf); font-size: 1.4rem; font-style: italic; margin-top: 10px; }
+
+        .joe-container { max-width: 1100px; margin: -50px auto 100px; padding: 0 20px; position: relative; z-index: 10; }
+        
+        .joe-scroll {
+            background: white;
+            border: 1px solid var(--gold-leaf);
+            padding: 80px 60px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+        }
+
+        .initiative-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .initiative-card {
+            border: 1px solid #eee;
+            padding: 30px;
+            background: var(--marble-white);
+            transition: 0.3s;
+            text-align: center;
+        }
+        .initiative-card:hover { border-color: var(--gold-leaf); transform: translateY(-5px); }
+        .initiative-card h3 { font-family: 'Cinzel'; color: var(--liturgical-blue); margin-bottom: 15px; border-bottom: 2px solid var(--gold-leaf); display: inline-block; }
+
+        .commitment-banner {
+            background: var(--liturgical-blue);
+            color: white;
+            padding: 60px;
+            margin-top: 60px;
+            text-align: center;
+            border-top: 5px solid var(--gold-leaf);
+        }
+
+        footer {
+            background: var(--legal-black);
+            color: white;
+            padding: 100px 5% 50px;
+            text-align: center;
+            border-top: 15px solid var(--gold-leaf);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="floating-logo-anchor">
+        <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST Logo">
+    </div>
+    
+    <nav class="top-nav">
+        <a href="index.html">The Testament</a>
+        <a href="tier-viability.html">Covenant Tiers</a>
+        <a href="urban-initiatives.html">Engagement</a> 
+        <a href="partnerships.html">Governance</a>
+        <a href="global-life-model.html">Life Model</a>
+    </nav>
+</header>
+
+<section class="joe-hero">
+    <h1>GLOBAL CITIZEN JOE</h1>
+    <p class="joe-sub">"Serving the Neighbor, Defending the City, Honoring the Republic."</p>
+</section>
+
+<div class="joe-container">
+    <div class="joe-scroll">
+        <h2 style="font-family: 'Cinzel'; text-align: center; color: var(--liturgical-blue); font-size: 2.2rem;">The Neighborly Covenant</h2>
+        
+        <p style="margin-top: 30px; font-size: 1.1rem; text-align: center; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">
+            "We have learned that the best people to know are the ones who have lived the life. Global Citizen Joe is our commitment to the everyday person in the urban environment—providing the support areas that are most critical to our collective survival."
+        </p>
+
+        <div class="initiative-grid">
+            <div class="initiative-card">
+                <h3>Urban Food Defense</h3>
+                <p>Establishing community-led food security programs that honor the dignity of every citizen, ensuring no neighbor is left without the essential lifeline of nutrition.</p>
+            </div>
+            <div class="initiative-card">
+                <h3>Block-Level Mentoring</h3>
+                <p>Deploying our "Helping Hand" at the neighborhood level, connecting local youth to the **Young Politicians™** path through direct, peer-to-peer civilian leadership.</p>
+            </div>
+            <div class="initiative-card">
+                <h3>Civic Integrity Walks</h3>
+                <p>Creating safe corridors through spiritual and legal adherence, teaching neighbors to defend their vision for a safe Philadelphia and a safe Pennsylvania.</p>
+            </div>
+        </div>
+
+        <div class="commitment-banner">
+            <h2 style="font-family: 'Cinzel'; color: var(--gold-leaf); font-size: 2rem;">Boots on the Ground Integrity</h2>
+            <p style="margin-top: 20px; font-size: 1.2rem; line-height: 1.8;">
+                Global Citizen Joe LLC is the physical hand of the Legal-Spiritual Bridge. It is where we apply the **30% Profit-to-Mission** promise to the very streets we call home. We welcome the common citizen with both arms open.
+            </p>
+        </div>
+
+        <p style="text-align: center; margin-top: 50px; font-family: 'Cinzel'; color: var(--liturgical-blue); letter-spacing: 3px;">
+            "WE DEFEND THE CITIZEN TO DEFEND THE WORLD."
+        </p>
+    </div>
+</div>
+
+<footer>
+    <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="Logo" style="height: 140px; filter: drop-shadow(0 0 15px var(--gold-leaf)); margin-bottom: 30px;">
+    <p style="font-family: 'Cinzel'; letter-spacing: 4px; font-size: 1.5rem;">TBBLUSA.INFO | GLOBAL CITIZEN JOE</p>
+    <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 30px;">GLOBAL CITIZEN JOE LLC IS A SUBSIDIARY OF THE TBBLUSA FOUNDATION &copy; 2026.</p>
+</footer>
+
+</body>
+</html>
