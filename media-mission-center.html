@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Mission Center | Broadcast & Production | TBBLUSA.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-leaf: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --liturgical-blue: #0a192f;
+            --legal-black: #050505;
+            --marble-white: #f8f9fa;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: url('https://www.transparenttextures.com/patterns/white-marble.png'), var(--marble-white);
+            color: var(--legal-black); 
+            line-height: 1.8; 
+        }
+
+        /* PERSISTENT ULTRA-SLIM HEADER (60PX) */
+        header {
+            background: var(--legal-black);
+            position: sticky;
+            top: 0;
+            z-index: 3000;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 4px solid var(--gold-leaf);
+            height: 60px; 
+            padding: 0 5%;
+        }
+
+        .floating-logo-anchor { 
+            position: absolute;
+            left: 5%;
+            top: 0;
+            height: 0; 
+        }
+
+        .floating-logo-anchor img { 
+            height: 320px; 
+            width: auto; 
+            filter: drop-shadow(0 0 15px var(--gold-glow));
+            animation: divine-glow 5s infinite ease-in-out;
+        }
+
+        @keyframes divine-glow {
+            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); transform: translateY(0); }
+            50% { filter: drop-shadow(0 0 30px var(--gold-leaf)); transform: translateY(5px); }
+        }
+
+        nav.top-nav { display: flex; gap: 30px; }
+        nav.top-nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 0.7rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2.5px;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* HERO: THE STUDIO OF ADHERENCE */
+        .media-hero {
+            padding: 280px 10% 120px;
+            background: linear-gradient(rgba(10, 25, 47, 0.92), rgba(10, 25, 47, 0.92)), url('production-studio-cathedral.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+            border-bottom: 12px solid var(--gold-leaf);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; color: white; letter-spacing: 5px; }
+        .broadcast-sub { font-family: 'Playfair Display', serif; color: var(--gold-leaf); font-size: 1.4rem; font-style: italic; margin-top: 10px; }
+
+        .media-container { max-width: 1100px; margin: -50px auto 100px; padding: 0 20px; position: relative; z-index: 10; }
+        
+        .production-scroll {
+            background: white;
+            border: 1px solid var(--gold-leaf);
+            padding: 80px 60px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+        }
+
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .channel-card {
+            border: 1px solid #eee;
+            padding: 30px;
+            background: var(--marble-white);
+            transition: 0.3s;
+            text-align: center;
+        }
+        .channel-card:hover { border-color: var(--gold-leaf); transform: translateY(-5px); }
+        .channel-card h3 { font-family: 'Cinzel'; color: var(--liturgical-blue); margin-bottom: 15px; }
+        .play-icon { font-size: 2rem; color: var(--gold-leaf); margin-bottom: 10px; display: block; }
+
+        .mission-broadcast {
+            background: var(--liturgical-blue);
+            color: white;
+            padding: 60px;
+            margin-top: 60px;
+            text-align: center;
+            border-top: 5px solid var(--gold-leaf);
+        }
+
+        footer {
+            background: var(--legal-black);
+            color: white;
+            padding: 100px 5% 50px;
+            text-align: center;
+            border-top: 15px solid var(--gold-leaf);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="floating-logo-anchor">
+        <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST Logo">
+    </div>
+    
+    <nav class="top-nav">
+        <a href="index.html">The Testament</a>
+        <a href="tier-viability.html">Covenant Tiers</a>
+        <a href="urban-initiatives.html">Engagement</a> 
+        <a href="partnerships.html">Governance</a>
+        <a href="stewardship-portal.html">Impact Data</a>
+    </nav>
+</header>
+
+<section class="media-hero">
+    <h1>MEDIA MISSION CENTER</h1>
+    <p class="broadcast-sub">"Broadcasting the Lifeline: Philadelphia's Voice to the World."</p>
+</section>
+
+<div class="media-container">
+    <div class="production-scroll">
+        <h2 style="font-family: 'Cinzel'; text-align: center; color: var(--liturgical-blue); font-size: 2.2rem;">The Creative Covenant</h2>
+        
+        <p style="margin-top: 30px; font-size: 1.1rem; text-align: center; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">
+            "We have learned from the furnace that the most important thing an urban environment needs is to be heard. We use our digital infrastructure to provide a platform for those who have learned to write the law, not break it."
+        </p>
+
+        <div class="channel-grid">
+            <div class="channel-card">
+                <span class="play-icon">▶</span>
+                <h3>Lethal Ledger</h3>
+                <p>Our premier media outlet for civic literacy and urban defense. We document the transition from the streets to the statehouse.</p>
+            </div>
+            <div class="channel-card">
+                <span class="play-icon">▶</span>
+                <h3>The Bridge-Gate Broadcast</h3>
+                <p>Real-time interviews and leadership mentoring with Philadelphia’s battle-tested professionals and corporate partners.</p>
+            </div>
+            <div class="channel-card">
+                <span class="play-icon">▶</span>
+                <h3>Young Politicians™ TV</h3>
+                <p>Highlighting the legislative literacy of our youth as they draft ordinances and engage with civilian leadership.</p>
+            </div>
+        </div>
+
+        <div class="mission-broadcast">
+            <h2 style="font-family: 'Cinzel'; color: var(--gold-leaf); font-size: 2rem;">A Visual Testament</h2>
+            <p style="margin-top: 20px; font-size: 1.2rem; line-height: 1.8;">
+                Our media is our mirror. We do not force the issue; we show the solution. Every film treatment and broadcast is funded by the <strong>30% Profit-to-Mission</strong> commitment, ensuring the world sees the result of our adherence.
+            </p>
+        </div>
+
+        <p style="text-align: center; margin-top: 50px; font-family: 'Cinzel'; color: var(--liturgical-blue); letter-spacing: 3px;">
+            "SINCE WE ARE IN THE POSITION TO HELP WITH OUR HANDS, WE BROADCAST WITH BOTH ARMS OPEN."
+        </p>
+    </div>
+</div>
+
+<footer>
+    <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="Logo" style="height: 140px; filter: drop-shadow(0 0 15px var(--gold-leaf)); margin-bottom: 30px;">
+    <p style="font-family: 'Cinzel'; letter-spacing: 4px; font-size: 1.5rem;">TBBLUSA.INFO | MEDIA & PRODUCTION</p>
+    <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 30px;">ALL CREATIVE CONTENT &copy; 2026. THE LEGAL-SPIRITUAL BRIDGE MEDIA GROUP.</p>
+</footer>
+
+</body>
+</html>
