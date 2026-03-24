@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Fellowship | The Fellowship of 20 | TBBLUSA.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-leaf: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --liturgical-blue: #0a192f;
+            --legal-black: #050505;
+            --marble-white: #f8f9fa;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: url('white-marble.png'), var(--marble-white);
+            color: var(--legal-black); 
+            line-height: 1.8; 
+            overflow-x: hidden;
+        }
+
+        /* 60PX PROFESSIONAL HEADER */
+        header {
+            background: var(--legal-black);
+            position: sticky; top: 0; z-index: 3000;
+            display: flex; justify-content: flex-end; align-items: center;
+            border-bottom: 4px solid var(--gold-leaf); height: 60px; padding: 0 5%;
+        }
+
+        .floating-logo-anchor { position: absolute; left: 5%; top: 0; height: 0; }
+        .floating-logo-anchor img { 
+            height: 320px; width: auto; 
+            filter: drop-shadow(0 0 15px var(--gold-glow));
+            animation: divine-glow 5s infinite ease-in-out;
+        }
+
+        @keyframes divine-glow {
+            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); transform: translateY(0); }
+            50% { filter: drop-shadow(0 0 30px var(--gold-leaf)); transform: translateY(5px); }
+        }
+
+        nav.top-nav { display: flex; gap: 30px; }
+        nav.top-nav a { 
+            color: white; text-decoration: none; font-weight: 700; 
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2.5px;
+            font-family: 'Cinzel', serif; transition: 0.4s;
+        }
+        nav.top-nav a:hover { color: var(--gold-leaf); text-shadow: 0 0 10px var(--gold-leaf); }
+
+        /* HERO: THE FELLOWSHIP HALL */
+        .fellowship-hero {
+            padding: 280px 10% 120px;
+            background: linear-gradient(rgba(10, 25, 47, 0.94), rgba(10, 25, 47, 0.94)), url('corporate-boardroom-philly.jpg');
+            background-attachment: fixed; background-size: cover; text-align: center;
+            border-bottom: 12px solid var(--gold-leaf);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; color: white; letter-spacing: 5px; }
+        .hero-subtext { font-family: 'Playfair Display', serif; color: var(--gold-leaf); font-size: 1.8rem; font-style: italic; margin-top: 15px; }
+
+        .content-scroll { 
+            max-width: 1100px; margin: -50px auto 100px; padding: 80px 60px;
+            background: white; border: 1px solid var(--gold-leaf);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15); position: relative; z-index: 10;
+        }
+
+        .mandate-text { 
+            font-size: 1.25rem; color: #222; border-left: 8px solid var(--gold-leaf); 
+            padding-left: 35px; margin-bottom: 40px; font-style: italic; font-family: 'Playfair Display', serif;
+        }
+
+        .fellowship-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; margin-top: 50px;
+        }
+
+        .fellow-card {
+            border-bottom: 5px solid var(--gold-leaf); padding: 40px;
+            background: var(--marble-white); transition: 0.3s; text-align: center;
+        }
+        .fellow-card:hover { transform: translateY(-10px); background: white; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .fellow-card h3 { font-family: 'Cinzel'; color: var(--liturgical-blue); margin-bottom: 15px; letter-spacing: 2px; }
+
+        .directory-section {
+            margin-top: 80px;
+            border-top: 1px solid #eee;
+            padding-top: 60px;
+        }
+
+        .member-list {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;
+        }
+
+        .member-badge {
+            padding: 15px 30px; border: 1px solid var(--gold-leaf); font-family: 'Cinzel';
+            font-size: 0.8rem; letter-spacing: 1px; color: var(--liturgical-blue); background: white;
+        }
+
+        .join-banner {
+            background: var(--liturgical-blue); color: white; padding: 60px;
+            margin-top: 60px; text-align: center; border: 2px solid var(--gold-leaf);
+        }
+
+        .action-btn {
+            background: var(--legal-black); color: var(--gold-leaf);
+            padding: 18px 45px; border: 2px solid var(--gold-leaf);
+            font-family: 'Cinzel'; font-weight: 900; letter-spacing: 3px;
+            cursor: pointer; margin-top: 30px; text-transform: uppercase;
+        }
+
+        /* MASTER FOOTER */
+        footer {
+            background: var(--legal-black); color: white; padding: 100px 10% 40px;
+            border-top: 15px solid var(--gold-leaf); text-align: left;
+        }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 80px; }
+        .footer-column h4 { font-family: 'Cinzel', serif; color: var(--gold-leaf); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-size: 0.9rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li a { color: #aaa; text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
+        .footer-column ul li a:hover { color: white; padding-left: 5px; }
+        .footer-bottom { border-top: 1px solid #222; padding-top: 40px; text-align: center; }
+        .copyright-creed { font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 3px; color: #555; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="floating-logo-anchor"><img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST Logo"></div>
+    <nav class="top-nav">
+        <a href="index.html">Testament</a>
+        <a href="corporate-covenant.html">Covenant</a>
+        <a href="corporate-fellowship.html" style="color: var(--gold-leaf);">Fellowship</a>
+        <a href="partnerships.html">Governance</a>
+    </nav>
+</header>
+
+<section class="fellowship-hero">
+    <h1>CORPORATE FELLOWSHIP</h1>
+    <p class="hero-subtext">"The Fellowship of 20: Unifying Urban Economic Power."</p>
+</section>
+
+<main class="content-scroll">
+    <h2 style="font-family: 'Cinzel'; text-align: center; font-size: 2.2rem; color: var(--liturgical-blue); margin-bottom: 30px;">Strategic Integration</h2>
+    
+    <div class="mandate-text">
+        "We have learned from the furnace of modern industry that Fellowship is the catalyst for Resurrection. The Corporate Fellowship is the high-level collaborative body where business leaders meet to synchronize their 30% Profit-to-Mission outcomes. Since we are in the position to lead, we expand our circle with both arms open."
+    </div>
+
+    <div class="fellowship-grid">
+        <div class="fellow-card">
+            <h3>Strategic B2B Synergy</h3>
+            <p>Direct access to our registry of verified corporate partners who adhere to the Legal-Spiritual Bridge protocols, creating a closed-loop economy of integrity.</p>
+        </div>
+        <div class="fellow-card">
+            <h3>Infrastructure Support</h3>
+            <p>Utilizing our 11+ years of IT engineering to provide fellowship members with secure communication corridors and data-backed impact reporting.</p>
+        </div>
+        <div class="fellow-card">
+            <h3>Civic Leadership Roundtable</h3>
+            <p>Quarterly summits in Philadelphia where World Architects and Fellowship members advise on the expansion of the Young Politicians™ curriculum.</p>
+        </div>
+    </div>
+
+    <div class="directory-section">
+        <h3 style="font-family: 'Cinzel'; text-align: center; color: var(--gold-leaf); letter-spacing: 3px;">Verified Fellowship Members</h3>
+        <div class="member-list">
+            <div class="member-badge">Global Citizen Joe LLC</div>
+            <div class="member-badge">Solomon Kin Records</div>
+            <div class="member-badge">Filthy Seduction Productions</div>
+            <div class="member-badge">Cast Ai Stars</div>
+            <div class="member-badge">Vexilla AI Tech Solutions</div>
+        </div>
+    </div>
+
+    <div class="join-banner">
+        <h2 style="font-family: 'Cinzel'; color: var(--gold-leaf); margin-bottom: 20px;">Enter the Fellowship</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8;">
+            "Adhering to the Fellowship is the highest form of networking. Your brand's integrity is your greatest asset. Join the circle of 20 and protect the Republic."
+        </p>
+        <button class="action-btn" onclick="location.href='the-tabernacle-of-giving.html'">Request Induction</button>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h4>The Testament</h4>
+            <ul>
+                <li><a href="index.html">The Founding Vision</a></li>
+                <li><a href="tier-viability.html">Covenant Protocols</a></li>
+                <li><a href="youth-resurrection.html">Youth Resurrection</a></li>
+                <li><a href="founding-fathers-legacy.html">Constitutional Roots</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>The Republic</h4>
+            <ul>
+                <li><a href="legal-compliance-audit.html">Compliance & Audits</a></li>
+                <li><a href="the-stewardship-charter.html">The Sovereign Charter</a></li>
+                <li><a href="partnerships.html">The Fellowship of 20</a></li>
+                <li><a href="global-stewardship-operations.html">Command & Control</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Tithe & Tribute</h4>
+            <ul>
+                <li><a href="tithe-and-tribute.html">Plant Your Seed</a></li>
+                <li><a href="corporate-covenant-registry.html">Prepco Dollar Registry</a></li>
+                <li><a href="the-founders-circle.html">The Founders Circle</a></li>
+                <li><a href="the-tabernacle-of-giving.html">The Giving Wall</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>The Infrastructure</h4>
+            <ul>
+                <li><a href="global-infrastructure-it.html">Technical Sovereignty</a></li>
+                <li><a href="lethal-ledger-broadcast-center.html">Lethal Ledger Media</a></li>
+                <li><a href="the-stewardship-impact-map.html">Impact Mapping</a></li>
+                <li><a href="stewardship-portal-login.html">Member Sanctuary</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p style="font-family: 'Cinzel'; font-size: 1.5rem; color: var(--gold-leaf); letter-spacing: 5px; margin-bottom: 10px;">TBBLUSA.ORG</p>
+        <p class="copyright-creed">ADHERENCE TO LAW IS THE FOUNDATION OF FREEDOM &copy; 2026 TBBLUSA FOUNDATION. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+
+</body>
+</html>
