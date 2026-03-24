@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Secure Stewardship Portal | TBBLUSA Member Sanctuary. Authenticated access to the Legal-Spiritual Bridge infrastructure.">
     <title>Member Sanctuary | Secure Access Portal | TBBLUSA.ORG</title>
-    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
-    
     <style>
         :root {
             --gold-leaf: #d4af37;
@@ -15,23 +12,20 @@
             --liturgical-blue: #0a192f;
             --legal-black: #050505;
             --marble-white: #f8f9fa;
-            --secure-green: #00ff00;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
             font-family: 'Montserrat', sans-serif; 
-            background: linear-gradient(rgba(10, 25, 47, 0.92), rgba(10, 25, 47, 0.92)), url('secure-server-room.jpg');
+            background: linear-gradient(rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.95)), url('image_2.png'); /* Using your generated gloved hands as a background tint */
             background-size: cover;
             background-attachment: fixed;
             color: white; 
-            line-height: 1.8; 
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
         }
 
-        /* 60PX ELITE NAV HUB */
         header {
             background: var(--legal-black);
             position: fixed; top: 0; width: 100%; z-index: 3000;
@@ -40,11 +34,7 @@
         }
 
         .floating-logo-anchor { position: absolute; left: 5%; top: 0; height: 0; }
-        .floating-logo-anchor img { 
-            height: 320px; width: auto; 
-            filter: drop-shadow(0 0 15px var(--gold-glow));
-            animation: divine-glow 5s infinite ease-in-out;
-        }
+        .floating-logo-anchor img { height: 320px; width: auto; filter: drop-shadow(0 0 15px var(--gold-glow)); animation: divine-glow 5s infinite ease-in-out; }
 
         @keyframes divine-glow {
             0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); transform: translateY(0); }
@@ -52,113 +42,62 @@
         }
 
         nav.top-nav { display: flex; gap: 30px; }
-        nav.top-nav a { 
-            color: white; text-decoration: none; font-weight: 700; 
-            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
-            font-family: 'Cinzel', serif;
-        }
+        nav.top-nav a { color: white; text-decoration: none; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; font-family: 'Cinzel', serif; }
 
-        /* PORTAL ACCESS CHAMBER */
-        .portal-chamber {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 160px 20px 100px;
-        }
-
-        .login-citadel {
-            background: rgba(5, 5, 5, 0.85);
+        .login-wrapper { flex: 1; display: flex; align-items: center; justify-content: center; padding: 150px 20px 100px; }
+        .login-card {
+            background: rgba(5, 5, 5, 0.9);
             border: 1px solid var(--gold-leaf);
-            width: 100%;
-            max-width: 480px;
-            padding: 60px 50px;
-            box-shadow: 0 0 60px rgba(0,0,0,1);
-            backdrop-filter: blur(20px);
+            width: 100%; max-width: 450px;
+            padding: 60px 40px;
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+            backdrop-filter: blur(10px);
             text-align: center;
-            position: relative;
         }
 
-        .login-citadel::before {
-            content: '';
-            position: absolute;
-            top: -2px; left: -2px; right: -2px; bottom: -2px;
-            background: linear-gradient(135deg, var(--gold-leaf), transparent, var(--gold-leaf));
-            z-index: -1;
-            opacity: 0.4;
-        }
+        h1 { font-family: 'Cinzel', serif; color: var(--gold-leaf); font-size: 1.8rem; letter-spacing: 4px; margin-bottom: 5px; }
+        .sys-status { font-family: 'Source Code Pro', monospace; color: #00ff00; font-size: 0.7rem; margin-bottom: 30px; }
 
-        h1 { font-family: 'Cinzel', serif; color: var(--gold-leaf); font-size: 2rem; letter-spacing: 5px; margin-bottom: 5px; }
-        .system-diag { font-family: 'Source Code Pro', monospace; color: var(--secure-green); font-size: 0.7rem; text-transform: uppercase; margin-bottom: 35px; letter-spacing: 3px; }
+        .field { text-align: left; margin-bottom: 25px; }
+        .field label { display: block; font-family: 'Cinzel'; font-size: 0.65rem; color: var(--gold-leaf); margin-bottom: 8px; letter-spacing: 2px; }
+        .field input { width: 100%; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid #333; color: white; outline: none; }
+        .field input:focus { border-color: var(--gold-leaf); }
 
-        .auth-field { text-align: left; margin-bottom: 25px; }
-        .auth-field label { display: block; font-family: 'Cinzel'; font-size: 0.7rem; color: var(--gold-leaf); margin-bottom: 10px; letter-spacing: 2px; }
-        .auth-field input { 
-            width: 100%; padding: 18px; background: rgba(255,255,255,0.03); 
-            border: 1px solid #333; color: white; font-family: 'Montserrat'; outline: none;
-            transition: 0.3s; font-size: 0.9rem;
-        }
-        .auth-field input:focus { border-color: var(--gold-leaf); background: rgba(255,255,255,0.08); box-shadow: 0 0 10px rgba(212,175,55,0.2); }
+        .btn-access { width: 100%; padding: 18px; background: var(--gold-leaf); color: var(--legal-black); border: none; font-family: 'Cinzel'; font-weight: 900; letter-spacing: 3px; cursor: pointer; text-transform: uppercase; }
 
-        .access-trigger {
-            width: 100%; padding: 20px; background: var(--gold-leaf); color: var(--legal-black);
-            border: none; font-family: 'Cinzel'; font-weight: 900; letter-spacing: 4px;
-            cursor: pointer; text-transform: uppercase; transition: 0.4s;
-            margin-top: 10px;
-        }
-        .access-trigger:hover { background: white; color: var(--liturgical-blue); transform: translateY(-2px); box-shadow: 0 10px 30px var(--gold-glow); }
-
-        .portal-help { margin-top: 40px; font-size: 0.75rem; color: #777; font-family: 'Montserrat'; letter-spacing: 1px; }
-        .portal-help a { color: var(--gold-leaf); text-decoration: none; font-weight: 700; transition: 0.3s; }
-        .portal-help a:hover { color: white; text-decoration: underline; }
-
-        /* STANDARDIZED 16-LINK FOOTER */
-        footer {
-            background: var(--legal-black); color: white; padding: 100px 10% 40px;
-            border-top: 15px solid var(--gold-leaf); text-align: left;
-        }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 80px; }
-        .footer-column h4 { font-family: 'Cinzel', serif; color: var(--gold-leaf); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-size: 0.9rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        footer { background: var(--legal-black); color: white; padding: 100px 10% 40px; border-top: 15px solid var(--gold-leaf); }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 50px; }
+        .footer-column h4 { font-family: 'Cinzel', serif; color: var(--gold-leaf); text-transform: uppercase; margin-bottom: 20px; font-size: 0.8rem; border-bottom: 1px solid #333; }
         .footer-column ul { list-style: none; }
-        .footer-column ul li { margin-bottom: 12px; }
-        .footer-column ul li a { color: #aaa; text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
-        .footer-column ul li a:hover { color: white; padding-left: 5px; }
-        .footer-bottom { border-top: 1px solid #222; padding-top: 40px; text-align: center; }
-        .copyright-creed { font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 3px; color: #555; text-transform: uppercase; }
+        .footer-column ul li { margin-bottom: 10px; }
+        .footer-column ul li a { color: #888; text-decoration: none; font-size: 0.75rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="floating-logo-anchor"><img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST Logo"></div>
+    <div class="floating-logo-anchor"><img src="COME TO CHRIST TBBLUSA.ORG.png" alt="Logo"></div>
     <nav class="top-nav">
         <a href="index.html">The Testament</a>
-        <a href="the-tabernacle-of-giving.html">Giving Wall</a>
-        <a href="stewardship-portal-login.html" style="color: var(--gold-leaf);">Sanctuary Login</a>
+        <a href="stewardship-portal-login.html" style="color: var(--gold-leaf);">Sanctuary Access</a>
     </nav>
 </header>
 
-<div class="portal-chamber">
-    <div class="login-citadel">
-        <h1>SANCTUARY ACCESS</h1>
-        <p class="system-diag">> [PROTOCOL: SECURE_VAULT] | [ENCRYPTION: AES-256]</p>
-        
+<div class="login-wrapper">
+    <div class="login-card">
+        <h1>SANCTUARY LOGIN</h1>
+        <p class="sys-status">> [SECURE_CONNECTION_ESTABLISHED]</p>
         <form>
-            <div class="auth-field">
-                <label>COVENANT CREDENTIAL / EMAIL</label>
-                <input type="text" placeholder="architect@tbblusa.org" required>
+            <div class="field">
+                <label>COVENANT ID</label>
+                <input type="text" placeholder="architect@tbblusa.org">
             </div>
-            <div class="auth-field">
-                <label>SECURE ACCESS KEY</label>
-                <input type="password" placeholder="••••••••••••" required>
+            <div class="field">
+                <label>ACCESS KEY</label>
+                <input type="password" placeholder="••••••••">
             </div>
-            <button type="submit" class="access-trigger">Authenticate Adherence</button>
+            <button class="btn-access">Authenticate Adherence</button>
         </form>
-
-        <div class="portal-help">
-            <p>Non-Registered Steward? <a href="the-tabernacle-of-giving.html">Establish Your Seed First</a></p>
-            <p style="margin-top: 15px;"><a href="#">Lost Your Access Key? Contact IT Command</a></p>
-        </div>
     </div>
 </div>
 
@@ -201,10 +140,8 @@
             </ul>
         </div>
     </div>
-
-    <div class="footer-bottom">
-        <p style="font-family: 'Cinzel'; font-size: 1.5rem; color: var(--gold-leaf); letter-spacing: 5px; margin-bottom: 10px;">TBBLUSA.ORG</p>
-        <p class="copyright-creed">ADHERENCE TO LAW IS THE FOUNDATION OF FREEDOM &copy; 2026 TBBLUSA FOUNDATION. ALL RIGHTS RESERVED.</p>
+    <div style="text-align: center;">
+        <p style="font-family: 'Cinzel'; color: var(--gold-leaf); letter-spacing: 5px;">TBBLUSA.ORG</p>
     </div>
 </footer>
 
