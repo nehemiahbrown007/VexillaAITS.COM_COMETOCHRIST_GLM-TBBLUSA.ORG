@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanctuary Access | Secure Member Entry | TBBLUSA.ORG</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold-leaf: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --liturgical-blue: #0a192f;
+            --legal-black: #050505;
+            --marble-white: #f8f9fa;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: linear-gradient(rgba(10, 25, 47, 0.94), rgba(10, 25, 47, 0.94)), url('image_1.png'); /* Using white-marble.png */
+            background-size: cover;
+            background-attachment: fixed;
+            color: white; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* 60PX ELITE HEADER */
+        header {
+            background: var(--legal-black);
+            position: fixed; top: 0; width: 100%; z-index: 3000;
+            display: flex; justify-content: flex-end; align-items: center;
+            border-bottom: 4px solid var(--gold-leaf); height: 60px; padding: 0 5%;
+        }
+
+        .floating-logo-anchor { position: absolute; left: 5%; top: 0; height: 0; }
+        .floating-logo-anchor img { 
+            height: 320px; width: auto; 
+            filter: drop-shadow(0 0 15px var(--gold-glow));
+            animation: divine-glow 5s infinite ease-in-out;
+        }
+
+        @keyframes divine-glow {
+            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); transform: translateY(0); }
+            50% { filter: drop-shadow(0 0 30px var(--gold-leaf)); transform: translateY(5px); }
+        }
+
+        nav.top-nav { display: flex; gap: 30px; }
+        nav.top-nav a { 
+            color: white; text-decoration: none; font-weight: 700; 
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            font-family: 'Cinzel', serif; transition: 0.4s;
+        }
+        nav.top-nav a:hover { color: var(--gold-leaf); text-shadow: 0 0 10px var(--gold-leaf); }
+
+        /* THE GATEWAY MODULE */
+        .gateway-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 180px 20px 100px;
+        }
+
+        .access-module {
+            background: rgba(5, 5, 5, 0.85);
+            border: 1px solid var(--gold-leaf);
+            width: 100%;
+            max-width: 500px;
+            padding: 70px 50px;
+            box-shadow: 0 0 70px rgba(0,0,0,1);
+            backdrop-filter: blur(25px);
+            text-align: center;
+            position: relative;
+        }
+
+        .access-module::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            background: linear-gradient(90deg, transparent, var(--gold-leaf), transparent);
+        }
+
+        h1 { font-family: 'Cinzel', serif; color: var(--gold-leaf); font-size: 2.2rem; letter-spacing: 6px; margin-bottom: 10px; }
+        .secure-line { font-family: 'Source Code Pro', monospace; color: #00ff00; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 40px; letter-spacing: 3px; }
+
+        .form-group { text-align: left; margin-bottom: 30px; }
+        .form-group label { display: block; font-family: 'Cinzel'; font-size: 0.7rem; color: var(--gold-leaf); margin-bottom: 12px; letter-spacing: 2px; }
+        .form-group input { 
+            width: 100%; padding: 20px; background: rgba(255,255,255,0.03); 
+            border: 1px solid #333; color: white; font-family: 'Montserrat'; outline: none;
+            transition: 0.4s; font-size: 1rem;
+        }
+        .form-group input:focus { border-color: var(--gold-leaf); background: rgba(255,255,255,0.07); }
+
+        .btn-authenticate {
+            width: 100%; padding: 22px; background: var(--gold-leaf); color: var(--legal-black);
+            border: none; font-family: 'Cinzel'; font-weight: 900; letter-spacing: 5px;
+            cursor: pointer; text-transform: uppercase; transition: 0.5s;
+        }
+        .btn-authenticate:hover { background: white; color: var(--liturgical-blue); box-shadow: 0 0 40px var(--gold-glow); }
+
+        .access-footer { margin-top: 40px; font-size: 0.75rem; color: #888; letter-spacing: 1px; }
+        .access-footer a { color: var(--gold-leaf); text-decoration: none; font-weight: 700; }
+
+        /* THE 16-LINK MASTER FOOTER */
+        footer {
+            background: var(--legal-black); color: white; padding: 100px 10% 40px;
+            border-top: 15px solid var(--gold-leaf); text-align: left;
+        }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 80px; }
+        .footer-column h4 { font-family: 'Cinzel', serif; color: var(--gold-leaf); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-size: 0.9rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li a { color: #aaa; text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
+        .footer-column ul li a:hover { color: white; padding-left: 5px; }
+        .footer-bottom { border-top: 1px solid #222; padding-top: 40px; text-align: center; }
+        .copyright-creed { font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 3px; color: #555; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="floating-logo-anchor"><img src="COME TO CHRIST TBBLUSA.ORG.png" alt="TBBLUSA Logo"></div>
+    <nav class="top-nav">
+        <a href="index.html">The Testament</a>
+        <a href="the-tabernacle-of-giving.html">The Offering</a>
+        <a href="sanctuary-access.html" style="color: var(--gold-leaf);">Access Sanctuary</a>
+    </nav>
+</header>
+
+<div class="gateway-wrapper">
+    <div class="access-module">
+        <h1>SANCTUARY ACCESS</h1>
+        <p class="secure-line">> [LINKING TO INFRASTRUCTURE_VAULT] | [STATUS: ENCRYPTED]</p>
+        
+        <form>
+            <div class="form-group">
+                <label>COVENANT IDENTITY (EMAIL)</label>
+                <input type="text" placeholder="identity@tbblusa.org" required>
+            </div>
+            <div class="form-group">
+                <label>STEWARDSHIP KEY</label>
+                <input type="password" placeholder="••••••••••••" required>
+            </div>
+            <button type="submit" class="btn-authenticate">Verify Adherence</button>
+        </form>
+
+        <div class="access-footer">
+            <p>New Member? <a href="the-tabernacle-of-giving.html">Register Your Seed</a></p>
+            <p style="margin-top: 15px;"><a href="#">Request Support from IT Command</a></p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h4>The Testament</h4>
+            <ul>
+                <li><a href="index.html">The Founding Vision</a></li>
+                <li><a href="tier-viability.html">Covenant Protocols</a></li>
+                <li><a href="youth-resurrection.html">Youth Resurrection</a></li>
+                <li><a href="founding-fathers-legacy.html">Constitutional Roots</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>The Republic</h4>
+            <ul>
+                <li><a href="legal-compliance-audit.html">Compliance & Audits</a></li>
+                <li><a href="the-stewardship-charter.html">The Sovereign Charter</a></li>
+                <li><a href="partnerships.html">The Fellowship of 20</a></li>
+                <li><a href="global-stewardship-operations.html">Command & Control</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Tithe & Tribute</h4>
+            <ul>
+                <li><a href="tithe-and-tribute.html">Plant Your Seed</a></li>
+                <li><a href="corporate-covenant-registry.html">Prepco Dollar Registry</a></li>
+                <li><a href="the-founders-circle.html">The Founders Circle</a></li>
+                <li><a href="the-tabernacle-of-giving.html">The Giving Wall</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>The Infrastructure</h4>
+            <ul>
+                <li><a href="global-infrastructure-it.html">Technical Sovereignty</a></li>
+                <li><a href="lethal-ledger-broadcast-center.html">Lethal Ledger Media</a></li>
+                <li><a href="the-stewardship-impact-map.html">Impact Mapping</a></li>
+                <li><a href="sanctuary-access.html">Member Sanctuary</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p style="font-family: 'Cinzel'; font-size: 1.5rem; color: var(--gold-leaf); letter-spacing: 5px; margin-bottom: 10px;">TBBLUSA.ORG</p>
+        <p class="copyright-creed">ADHERENCE TO LAW IS THE FOUNDATION OF FREEDOM &copy; 2026 TBBLUSA FOUNDATION. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+
+</body>
+</html>
