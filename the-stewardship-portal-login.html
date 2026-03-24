@@ -3,12 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Secure Stewardship Portal: The private gateway for TBBLUSA World Architects and Young Politicians. Access the Legal-Spiritual Bridge infrastructure.">
-    <meta name="keywords" content="Stewardship Login, TBBLUSA Private Access, World Architect Portal, Philadelphia Nonprofit Login, Urban Defense Infrastructure, Secure Philanthropy">
-    <title>Stewardship Portal | Secure Access | TBBLUSA.ORG</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <title>Member Sanctuary | Secure Stewardship Portal | TBBLUSA.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --gold-leaf: #d4af37;
@@ -21,18 +17,22 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
             font-family: 'Montserrat', sans-serif; 
-            background: var(--liturgical-blue);
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('secure-server-room.jpg');
+            background-size: cover;
+            background-attachment: fixed;
             color: white; 
             line-height: 1.8; 
-            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* 60PX ULTRA-SLIM CROWN HEADER */
+        /* 60PX PROFESSIONAL HEADER */
         header {
             background: var(--legal-black);
-            position: sticky; top: 0; z-index: 3000;
+            position: fixed; top: 0; width: 100%; z-index: 3000;
             display: flex; justify-content: flex-end; align-items: center;
-            border-bottom: 2px solid var(--gold-leaf); height: 60px; padding: 0 5%;
+            border-bottom: 4px solid var(--gold-leaf); height: 60px; padding: 0 5%;
         }
 
         .floating-logo-anchor { position: absolute; left: 5%; top: 0; height: 0; }
@@ -43,86 +43,163 @@
         }
 
         @keyframes divine-glow {
-            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); }
-            50% { filter: drop-shadow(0 0 25px var(--gold-leaf)); }
+            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); transform: translateY(0); }
+            50% { filter: drop-shadow(0 0 30px var(--gold-leaf)); transform: translateY(5px); }
         }
 
-        /* LOGIN CONTAINER */
-        .login-box {
-            max-width: 450px;
-            margin: 220px auto 100px;
-            padding: 50px;
-            background: rgba(255, 255, 255, 0.05);
+        nav.top-nav { display: flex; gap: 30px; }
+        nav.top-nav a { 
+            color: white; text-decoration: none; font-weight: 700; 
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* LOGIN SANCTUARY BOX */
+        .portal-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 20px 100px;
+        }
+
+        .login-card {
+            background: rgba(5, 5, 5, 0.85);
             border: 1px solid var(--gold-leaf);
-            box-shadow: 0 0 50px rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 450px;
+            padding: 60px 40px;
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+            backdrop-filter: blur(15px);
             text-align: center;
+            position: relative;
         }
 
-        h1 { font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--gold-leaf); letter-spacing: 3px; margin-bottom: 30px; }
-        
-        .input-group { margin-bottom: 20px; text-align: left; }
-        .input-group label { display: block; font-family: 'Cinzel'; font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 5px; color: var(--gold-leaf); }
-        .input-group input { 
-            width: 100%; padding: 12px; background: rgba(0,0,0,0.5); 
-            border: 1px solid #333; color: white; font-family: 'Montserrat';
+        .login-card::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, transparent, var(--gold-leaf), transparent);
+            z-index: -1;
+            opacity: 0.3;
         }
-        .input-group input:focus { border-color: var(--gold-leaf); outline: none; }
 
-        .login-btn {
-            width: 100%; padding: 15px; background: var(--gold-leaf); color: var(--legal-black);
+        h1 { font-family: 'Cinzel', serif; color: var(--gold-leaf); font-size: 1.8rem; letter-spacing: 4px; margin-bottom: 10px; }
+        .secure-status { font-family: 'Source Code Pro', monospace; color: #00ff00; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 2px; }
+
+        .form-group { text-align: left; margin-bottom: 25px; }
+        .form-group label { display: block; font-family: 'Cinzel'; font-size: 0.65rem; color: var(--gold-leaf); margin-bottom: 8px; letter-spacing: 2px; }
+        .form-group input { 
+            width: 100%; padding: 15px; background: rgba(255,255,255,0.05); 
+            border: 1px solid #333; color: white; font-family: 'Montserrat'; outline: none;
+            transition: 0.3s;
+        }
+        .form-group input:focus { border-color: var(--gold-leaf); background: rgba(255,255,255,0.1); }
+
+        .access-btn {
+            width: 100%; padding: 18px; background: var(--gold-leaf); color: var(--legal-black);
             border: none; font-family: 'Cinzel'; font-weight: 900; letter-spacing: 3px;
-            cursor: pointer; margin-top: 20px; transition: 0.3s;
+            cursor: pointer; text-transform: uppercase; transition: 0.4s;
         }
-        .login-btn:hover { background: white; transform: translateY(-2px); }
+        .access-btn:hover { background: white; box-shadow: 0 0 20px var(--gold-glow); }
 
-        .portal-links { margin-top: 30px; font-size: 0.7rem; color: #888; letter-spacing: 1px; }
-        .portal-links a { color: var(--gold-leaf); text-decoration: none; }
+        .portal-meta { margin-top: 30px; font-size: 0.7rem; color: #666; font-family: 'Montserrat'; }
+        .portal-meta a { color: var(--gold-leaf); text-decoration: none; }
 
+        /* FOOTER */
         footer {
-            background: var(--legal-black);
-            color: #444;
-            padding: 80px 5% 40px;
-            text-align: center;
-            border-top: 4px solid #111;
+            background: var(--legal-black); color: white; padding: 100px 10% 40px;
+            border-top: 15px solid var(--gold-leaf); text-align: left;
         }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 80px; }
+        .footer-column h4 { font-family: 'Cinzel', serif; color: var(--gold-leaf); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-size: 0.9rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li a { color: #aaa; text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
+        .footer-column ul li a:hover { color: white; padding-left: 5px; }
+        .footer-bottom { border-top: 1px solid #222; padding-top: 40px; text-align: center; }
+        .copyright-creed { font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 3px; color: #555; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="floating-logo-anchor"><img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST Logo"></div>
+    <nav class="top-nav">
+        <a href="index.html">The Testament</a>
+        <a href="the-tabernacle-of-giving.html">Giving Wall</a>
+        <a href="stewardship-portal-login.html" style="color: var(--gold-leaf);">Sanctuary Access</a>
+    </nav>
 </header>
 
-<div class="login-box">
-    <h1>STEWARDSHIP LOGIN</h1>
-    <p style="font-family: 'Playfair Display'; font-style: italic; font-size: 0.9rem; margin-bottom: 30px; color: #ccc;">"Adhering to the Security of the Republic."</p>
-    
-    <form>
-        <div class="input-group">
-            <label>COVENANT ID</label>
-            <input type="text" placeholder="Enter Member ID">
-        </div>
-        <div class="input-group">
-            <label>SECURE KEY</label>
-            <input type="password" placeholder="••••••••">
-        </div>
-        <button type="submit" class="login-btn">ACCESS THE BRIDGE</button>
-    </form>
+<div class="portal-wrapper">
+    <div class="login-card">
+        <h1>MEMBER SANCTUARY</h1>
+        <p class="secure-status">> [ENCRYPTION: AES-256] | [STATUS: SECURE]</p>
+        
+        <form>
+            <div class="form-group">
+                <label>COVENANT ID / EMAIL</label>
+                <input type="text" placeholder="steward@tbblusa.org">
+            </div>
+            <div class="form-group">
+                <label>SECURE ACCESS KEY</label>
+                <input type="password" placeholder="••••••••••••">
+            </div>
+            <button type="submit" class="access-btn">Access the Bridge</button>
+        </form>
 
-    <div class="portal-links">
-        <a href="tithe-and-tribute.html">Register New Seed</a> | <a href="#">Forgot Key?</a>
+        <div class="portal-meta">
+            <p>New Steward? <a href="the-tabernacle-of-giving.html">Register Your Seed</a></p>
+            <p style="margin-top: 10px;"><a href="#">Request Technical Support</a></p>
+        </div>
     </div>
 </div>
 
-<p style="text-align: center; font-family: 'Cinzel'; font-size: 0.7rem; color: var(--gold-leaf); letter-spacing: 5px; opacity: 0.5;">
-    ENCRYPTED VIA SOVEREIGN VAULT INFRASTRUCTURE
-</p>
-
 <footer>
-    <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="Logo" style="height: 100px; filter: grayscale(1) opacity(0.2); margin-bottom: 20px;">
-    <p style="font-family: 'Cinzel'; letter-spacing: 3px; font-size: 1.2rem;">TBBLUSA.INFO | SECURE ACCESS</p>
-    <p style="font-size: 0.6rem; margin-top: 20px;">SYSTEM ARCHITECTURE CERTIFIED 2026. ALL RIGHTS RESERVED TBBLUSA.ORG</p>
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h4>The Testament</h4>
+            <ul>
+                <li><a href="index.html">The Founding Vision</a></li>
+                <li><a href="tier-viability.html">Covenant Protocols</a></li>
+                <li><a href="youth-resurrection.html">Youth Resurrection</a></li>
+                <li><a href="founding-fathers-legacy.html">Constitutional Roots</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>The Republic</h4>
+            <ul>
+                <li><a href="legal-compliance-audit.html">Compliance & Audits</a></li>
+                <li><a href="the-stewardship-charter.html">The Sovereign Charter</a></li>
+                <li><a href="partnerships.html">The Fellowship of 20</a></li>
+                <li><a href="global-stewardship-operations.html">Command & Control</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Tithe & Tribute</h4>
+            <ul>
+                <li><a href="tithe-and-tribute.html">Plant Your Seed</a></li>
+                <li><a href="corporate-covenant-registry.html">Prepco Dollar Registry</a></li>
+                <li><a href="the-founders-circle.html">The Founders Circle</a></li>
+                <li><a href="the-tabernacle-of-giving.html">The Giving Wall</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>The Infrastructure</h4>
+            <ul>
+                <li><a href="global-infrastructure-it.html">Technical Sovereignty</a></li>
+                <li><a href="lethal-ledger-broadcast-center.html">Lethal Ledger Media</a></li>
+                <li><a href="the-stewardship-impact-map.html">Impact Mapping</a></li>
+                <li><a href="stewardship-portal-login.html">Member Sanctuary</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p style="font-family: 'Cinzel'; font-size: 1.5rem; color: var(--gold-leaf); letter-spacing: 5px; margin-bottom: 10px;">TBBLUSA.ORG</p>
+        <p class="copyright-creed">ADHERENCE TO LAW IS THE FOUNDATION OF FREEDOM &copy; 2026 TBBLUSA FOUNDATION. ALL RIGHTS RESERVED.</p>
+    </div>
 </footer>
 
 </body>
