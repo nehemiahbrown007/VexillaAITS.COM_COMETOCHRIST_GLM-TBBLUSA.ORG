@@ -23,7 +23,7 @@
             overflow-x: hidden;
         }
 
-        /* ULTRA-SLIM NAVIGATION HUB (60PX) */
+        /* ENHANCED PROFESSIONAL HEADER (60PX) */
         header {
             background: var(--legal-black);
             position: sticky;
@@ -35,6 +35,7 @@
             border-bottom: 4px solid var(--gold-leaf);
             height: 60px; 
             padding: 0 5%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .floating-logo-anchor { 
@@ -61,14 +62,20 @@
             color: white; 
             text-decoration: none; 
             font-weight: 700; 
-            font-size: 0.7rem; 
+            font-size: 0.75rem; 
             text-transform: uppercase; 
             letter-spacing: 2.5px;
             font-family: 'Cinzel', serif;
             transition: 0.4s;
+            opacity: 0.8;
         }
-        nav.top-nav a:hover { color: var(--gold-leaf); text-shadow: 0 0 10px var(--gold-leaf); }
+        nav.top-nav a:hover { 
+            color: var(--gold-leaf); 
+            opacity: 1;
+            text-shadow: 0 0 15px var(--gold-glow);
+        }
 
+        /* HERO SECTION */
         .hero-citadel {
             padding: 280px 10% 150px;
             background: linear-gradient(rgba(5, 5, 5, 0.85), rgba(5, 5, 5, 0.85)), url('philly-court-stained-glass.jpg');
@@ -94,30 +101,30 @@
         }
 
         .mandate-text { 
-            font-size: 1.2rem; 
-            color: #333; 
+            font-size: 1.25rem; 
+            color: #222; 
             border-left: 8px solid var(--gold-leaf); 
             padding-left: 35px; 
             margin-bottom: 40px;
             font-style: italic;
+            font-family: 'Playfair Display', serif;
         }
 
-        /* UPDATED 6-COLUMN GRID FOR ALL PILLARS */
+        /* PILLAR GRID */
         .tier-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 20px; 
+            gap: 25px; 
             margin-top: 60px;
         }
         
         .tier-arch {
             background: var(--marble-white);
             border: 1px solid #ddd;
-            padding: 40px 15px;
+            padding: 50px 20px;
             text-align: center;
             transition: 0.5s;
             border-radius: 150px 150px 0 0;
-            cursor: pointer;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -127,20 +134,74 @@
             transform: translateY(-15px); 
             background: white;
             border-color: var(--gold-leaf);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.25);
         }
 
-        .tier-arch h3 { font-family: 'Cinzel', serif; letter-spacing: 2px; font-size: 1rem; color: var(--liturgical-blue); min-height: 50px; }
-        .tier-divider { width: 40px; height: 3px; background: var(--gold-leaf); margin: 15px auto; }
-        .price { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--gold-leaf); }
-        .pillar-desc { font-size: 0.85rem; margin-top: 15px; color: #555; font-weight: 400; }
+        .tier-arch h3 { font-family: 'Cinzel', serif; letter-spacing: 2px; font-size: 1.1rem; color: var(--liturgical-blue); }
+        .tier-divider { width: 50px; height: 3px; background: var(--gold-leaf); margin: 20px auto; }
+        .price { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; color: var(--gold-leaf); }
+        .pillar-desc { font-size: 0.9rem; margin-top: 15px; color: #444; }
 
+        /* STRATEGIC 16-LINK FOOTER */
         footer {
             background: var(--legal-black);
             color: white;
-            padding: 100px 5% 50px;
-            text-align: center;
+            padding: 100px 10% 40px;
             border-top: 15px solid var(--gold-leaf);
+            text-align: left;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .footer-column h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-leaf);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: 0.3s;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: capitalize;
+        }
+        .footer-column ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #222;
+            padding-top: 40px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            height: 120px;
+            filter: drop-shadow(0 0 10px var(--gold-glow));
+            margin-bottom: 20px;
+        }
+
+        .copyright {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: #555;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -162,18 +223,18 @@
 
 <main>
     <section class="hero-citadel">
-        <h1>THE LEGAL-SPIRITUAL BRIDGE</h1>
+        <h1>THE LEGAL-SPIRITBRIDGE</h1>
         <p class="hero-subtext">Defending Philadelphia: A Covenant of Adherence</p>
         <p style="color: white; letter-spacing: 8px; margin-top: 20px; font-weight: 300;">CIVIC INTEGRITY • DIVINE STEWARDSHIP</p>
     </section>
 
     <div class="content-scroll">
-        <h2 style="font-family: 'Cinzel'; text-align: center; margin-bottom: 30px;">The Soulful Mandate</h2>
+        <h2 style="font-family: 'Cinzel'; text-align: center; margin-bottom: 30px; letter-spacing: 3px;">The Soulful Mandate</h2>
         <div class="mandate-text">
             "We do not force the issue, for everyone is here to live. Our only mission is to make you aware and provide solutions that could possibly be the answer. Since we are in the position to help with our hands, we welcome you with both arms open."
         </div>
         
-        <p style="text-align: center; margin-bottom: 50px; font-size: 1.1rem; color: #444;">
+        <p style="text-align: center; margin-bottom: 50px; font-size: 1.15rem; color: #333; max-width: 900px; margin-left: auto; margin-right: auto;">
             Our congregation is the <strong>Lifeline</strong> of the Commonwealth. We provide the support areas most critical to the urban environment, scaling our vision to protect our city, our state, and our world.
         </p>
 
@@ -218,11 +279,54 @@
     </div>
 </main>
 
-
-
 <footer>
-    <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="Logo" style="height: 160px; filter: drop-shadow(0 0 15px var(--gold-leaf)); margin-bottom: 40px;">
-    <p style="font-family: 'Cinzel'; font-size: 1.8rem; color: var(--gold-leaf); letter-spacing: 3px;">TBBLUSA.INFO | PHILADELPHIA</p>
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h4>The Testament</h4>
+            <ul>
+                <li><a href="index.html">The Founding Vision</a></li>
+                <li><a href="tier-viability.html">Covenant Protocols</a></li>
+                <li><a href="youth-resurrection.html">Youth Resurrection</a></li>
+                <li><a href="founding-fathers-legacy.html">Constitutional Roots</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>The Republic</h4>
+            <ul>
+                <li><a href="legal-compliance-audit.html">Compliance & Audits</a></li>
+                <li><a href="the-stewardship-charter.html">The Sovereign Charter</a></li>
+                <li><a href="partnerships.html">The Fellowship of 20</a></li>
+                <li><a href="global-stewardship-operations.html">Command & Control</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Tithe & Tribute</h4>
+            <ul>
+                <li><a href="tithe-and-tribute.html">Plant Your Seed</a></li>
+                <li><a href="corporate-covenant-registry.html">Prepco Dollar Registry</a></li>
+                <li><a href="the-founders-circle.html">The Founders Circle</a></li>
+                <li><a href="the-tabernacle-of-giving.html">The Giving Wall</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>The Infrastructure</h4>
+            <ul>
+                <li><a href="global-infrastructure-it.html">Technical Sovereignty</a></li>
+                <li><a href="lethal-ledger-broadcast-center.html">Lethal Ledger Media</a></li>
+                <li><a href="the-stewardship-impact-map.html">Impact Mapping</a></li>
+                <li><a href="stewardship-portal-login.html">Member Sanctuary</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="TBBLUSA Logo" class="footer-logo">
+        <p style="font-family: 'Cinzel'; font-size: 1.5rem; color: var(--gold-leaf); letter-spacing: 5px; margin-bottom: 10px;">TBBLUSA.ORG</p>
+        <p class="copyright">ADHERENCE TO LAW IS THE FOUNDATION OF FREEDOM &copy; 2026 TBBLUSA FOUNDATION. ALL RIGHTS RESERVED.</p>
+    </div>
 </footer>
 
 </body>
