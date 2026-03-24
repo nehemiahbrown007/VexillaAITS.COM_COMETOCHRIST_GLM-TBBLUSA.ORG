@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TBBLUSA Global Stewardship Operations: The technical and logistical command center for Philadelphia's urban defense and community safety.">
+    <meta name="keywords" content="Urban Operations Philadelphia, Community Safety Technology, TBBLUSA Operations, Neighborhood Patrol Logistics, Secure Urban Defense, Philadelphia IT Infrastructure">
+    <title>Stewardship Operations | Command & Control | TBBLUSA.ORG</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold-leaf: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --liturgical-blue: #0a192f;
+            --legal-black: #050505;
+            --marble-white: #f8f9fa;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: url('https://www.transparenttextures.com/patterns/white-marble.png'), var(--marble-white);
+            color: var(--legal-black); 
+            line-height: 1.8; 
+        }
+
+        /* 60PX ULTRA-SLIM CROWN HEADER */
+        header {
+            background: var(--legal-black);
+            position: sticky; top: 0; z-index: 3000;
+            display: flex; justify-content: flex-end; align-items: center;
+            border-bottom: 4px solid var(--gold-leaf); height: 60px; padding: 0 5%;
+        }
+
+        .floating-logo-anchor { position: absolute; left: 5%; top: 0; height: 0; }
+        .floating-logo-anchor img { 
+            height: 320px; width: auto; 
+            filter: drop-shadow(0 0 15px var(--gold-glow));
+            animation: divine-glow 5s infinite ease-in-out;
+        }
+
+        @keyframes divine-glow {
+            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); }
+            50% { filter: drop-shadow(0 0 25px var(--gold-leaf)); }
+        }
+
+        nav.top-nav { display: flex; gap: 30px; }
+        nav.top-nav a { 
+            color: white; text-decoration: none; font-weight: 700; 
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* HERO: THE OPERATIONS HUB */
+        .ops-hero {
+            padding: 280px 10% 120px;
+            background: linear-gradient(rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.95)), url('urban-ops-center.jpg');
+            background-attachment: fixed; background-size: cover; text-align: center;
+            border-bottom: 15px solid var(--gold-leaf);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; color: white; letter-spacing: 5px; }
+        .ops-subtext { font-family: 'Source Code Pro', monospace; color: var(--gold-leaf); font-size: 1rem; margin-top: 15px; }
+
+        .ops-container { max-width: 1100px; margin: -50px auto 100px; padding: 0 20px; position: relative; z-index: 10; }
+        
+        .parchment-scroll {
+            background: white;
+            border: 1px solid var(--gold-leaf);
+            padding: 80px 60px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+        }
+
+        .ops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; margin-top: 50px;
+        }
+
+        .ops-card {
+            border-left: 5px solid var(--gold-leaf);
+            padding: 30px;
+            background: var(--marble-white);
+            transition: 0.3s;
+        }
+        .ops-card:hover { transform: scale(1.02); background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .ops-card h3 { font-family: 'Cinzel'; color: var(--liturgical-blue); font-size: 1.1rem; margin-bottom: 10px; }
+
+        .tech-banner {
+            background: var(--liturgical-blue);
+            color: white;
+            padding: 40px;
+            margin-top: 60px;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 0.85rem;
+            border: 1px solid var(--gold-leaf);
+            text-align: left;
+        }
+
+        footer {
+            background: var(--legal-black);
+            color: white;
+            padding: 100px 5% 50px;
+            text-align: center;
+            border-top: 15px solid var(--gold-leaf);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="floating-logo-anchor"><img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST Logo"></div>
+    <nav class="top-nav">
+        <a href="index.html">The Testament</a>
+        <a href="global-infrastructure-it.html">IT Backbone</a>
+        <a href="neighborhood-protection-patrol.html">The Block</a>
+        <a href="global-stewardship-operations.html" style="color: var(--gold-leaf);">Operations</a>
+    </nav>
+</header>
+
+<section class="ops-hero">
+    <h1>STEWARDSHIP OPERATIONS</h1>
+    <p class="ops-subtext">> [SYS_STATUS]: ACTIVE | [LOCATION]: PHILLY_CENTRAL</p>
+</section>
+
+<div class="ops-container">
+    <div class="parchment-scroll">
+        <h2 style="font-family: 'Cinzel'; text-align: center; font-size: 2.2rem; color: var(--liturgical-blue);">Technical Urban Defense</h2>
+        
+        <p style="margin-top: 30px; font-size: 1.1rem; text-align: center; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto;">
+            "We have learned from the struggle that safety is a product of adherence and infrastructure. Our Operations center provides the support areas required for a 21st-century urban environment. Since we are in the position to lead, we secure the streets with both arms open."
+        </p>
+
+        <div class="ops-grid">
+            <div class="ops-card">
+                <h3>Real-Time Dispatch Adherence</h3>
+                <p>Utilizing high-availability server clusters to coordinate the **Neighborhood Protection Patrols**. Every "Safe Corridor" is monitored via secure, encrypted data lifelines.</p>
+            </div>
+            <div class="ops-card">
+                <h3>Logistical Infrastructure</h3>
+                <p>Managing the physical and technical rollout of the **Young Politicians™** hubs. We ensure that every leadership site adheres to professional-grade IT and safety standards.</p>
+            </div>
+            <div class="ops-card">
+                <h3>Strategic Resource Mapping</h3>
+                <p>Deploying the **30% Profit-to-Mission** dividends through a data-backed allocation system. We map the urban furnace and dispatch the "Helping Hand" where it is most critical.</p>
+            </div>
+        </div>
+
+        <div class="tech-banner">
+            <p>> initializing_dispatch_matrix...</p>
+            <p>> status: SECURE_CHANNEL_PHILLY_01</p>
+            <p>> monitoring: NORTH_PHILLY_CORRIDOR_ALPHA</p>
+            <p>> monitoring: WEST_PHILLY_RESURRECTION_ZONE</p>
+            <p>> protocol: ADHERENCE_99.9_PERCENT</p>
+        </div>
+
+        <p style="text-align: center; margin-top: 50px; font-family: 'Cinzel'; color: var(--liturgical-blue); letter-spacing: 5px; font-weight: 700;">
+            THE BEST PEOPLE TO KNOW ARE THE ONES WHO MAINTAIN THE SYSTEMS.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="Logo" style="height: 140px; filter: drop-shadow(0 0 15px var(--gold-leaf)); margin-bottom: 30px;">
+    <p style="font-family: 'Cinzel'; letter-spacing: 3px; font-size: 1.5rem; color: var(--gold-leaf);">TBBLUSA.INFO | OPERATIONS DIVISION</p>
+</footer>
+
+</body>
+</html>
