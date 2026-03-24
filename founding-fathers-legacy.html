@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founding Fathers Legacy | Reclaiming the Republic | TBBLUSA.ORG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-leaf: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --liturgical-blue: #0a192f;
+            --legal-black: #050505;
+            --marble-white: #f8f9fa;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: url('https://www.transparenttextures.com/patterns/white-marble.png'), var(--marble-white);
+            color: var(--legal-black); 
+            line-height: 1.8; 
+            overflow-x: hidden;
+        }
+
+        /* HEADER (60PX) */
+        header {
+            background: var(--legal-black);
+            position: sticky; top: 0; z-index: 3000;
+            display: flex; justify-content: flex-end; align-items: center;
+            border-bottom: 4px solid var(--gold-leaf); height: 60px; padding: 0 5%;
+        }
+
+        .floating-logo-anchor { position: absolute; left: 5%; top: 0; height: 0; }
+        .floating-logo-anchor img { 
+            height: 320px; width: auto; 
+            filter: drop-shadow(0 0 15px var(--gold-glow));
+            animation: divine-glow 5s infinite ease-in-out;
+        }
+
+        @keyframes divine-glow {
+            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); }
+            50% { filter: drop-shadow(0 0 30px var(--gold-leaf)); }
+        }
+
+        nav.top-nav { display: flex; gap: 30px; }
+        nav.top-nav a { 
+            color: white; text-decoration: none; font-weight: 700; 
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2.5px;
+            font-family: 'Cinzel', serif;
+            transition: 0.4s;
+        }
+        nav.top-nav a:hover { color: var(--gold-leaf); text-shadow: 0 0 10px var(--gold-leaf); }
+
+        /* HERO: THE HALL OF ANCESTORS */
+        .legacy-hero {
+            padding: 280px 10% 120px;
+            background: linear-gradient(rgba(10, 25, 47, 0.94), rgba(10, 25, 47, 0.94)), url('independence-hall-interior.jpg');
+            background-attachment: fixed; background-size: cover; text-align: center;
+            border-bottom: 12px solid var(--gold-leaf);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; color: white; letter-spacing: 5px; }
+        .legacy-subtext { font-family: 'Playfair Display', serif; color: var(--gold-leaf); font-size: 1.8rem; font-style: italic; margin-top: 15px; }
+
+        .legacy-container { max-width: 1100px; margin: -50px auto 100px; padding: 0 20px; position: relative; z-index: 10; }
+        
+        .scroll-content {
+            background: white;
+            border: 1px solid var(--gold-leaf);
+            padding: 80px 60px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+        }
+
+        .mandate-text { 
+            font-size: 1.25rem; color: #222; border-left: 8px solid var(--gold-leaf); 
+            padding-left: 35px; margin-bottom: 40px; font-style: italic; font-family: 'Playfair Display', serif;
+        }
+
+        .legacy-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; margin-top: 50px;
+        }
+
+        .history-card {
+            border-bottom: 4px solid var(--gold-leaf); padding: 30px;
+            background: var(--marble-white); transition: 0.3s; text-align: center;
+        }
+        .history-card:hover { background: white; transform: scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .history-card h3 { font-family: 'Cinzel'; color: var(--liturgical-blue); margin-bottom: 15px; letter-spacing: 2px; }
+
+        .oath-banner {
+            background: var(--liturgical-blue); color: white; padding: 60px;
+            margin-top: 60px; text-align: center; border: 2px solid var(--gold-leaf);
+        }
+
+        /* MASTER FOOTER STYLES */
+        footer {
+            background: var(--legal-black); color: white; padding: 100px 10% 40px;
+            border-top: 15px solid var(--gold-leaf); text-align: left;
+        }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 80px; }
+        .footer-column h4 { font-family: 'Cinzel', serif; color: var(--gold-leaf); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; font-size: 0.9rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li a { color: #aaa; text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
+        .footer-column ul li a:hover { color: white; padding-left: 5px; }
+        .footer-bottom { border-top: 1px solid #222; padding-top: 40px; text-align: center; }
+        .footer-logo { height: 120px; filter: drop-shadow(0 0 10px var(--gold-glow)); margin-bottom: 20px; }
+        .copyright-creed { font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 3px; color: #555; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="floating-logo-anchor"><img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST Logo"></div>
+    <nav class="top-nav">
+        <a href="index.html">The Testament</a>
+        <a href="tier-viability.html">Covenant Tiers</a>
+        <a href="partnerships.html">Governance</a>
+        <a href="founding-fathers-legacy.html" style="color: var(--gold-leaf);">The Legacy</a>
+    </nav>
+</header>
+
+<section class="legacy-hero">
+    <h1>THE FOUNDING LEGACY</h1>
+    <p class="legacy-subtext">"Philadelphia 1776 — The Cradle of Adherence."</p>
+</section>
+
+<div class="legacy-container">
+    <div class="scroll-content">
+        <h2 style="font-family: 'Cinzel'; text-align: center; font-size: 2.2rem; color: var(--liturgical-blue);">A Republic of Integrity</h2>
+        
+        <div class="mandate-text">
+            "We have learned from the furnace of history that a city is only as strong as its adherence to the Law. Our Founding Fathers established this city as a sanctuary of Civilian Leadership. We continue that mission by teaching the children of today to write the laws of tomorrow."
+        </div>
+
+        <p style="text-align: center; margin-bottom: 40px; color: #444; font-size: 1.1rem;">
+            The TBBLUSA mission is the spiritual and civic resurrection of the principles signed in Independence Hall. We are reclaiming the "Safe Corridor" of liberty.
+        </p>
+
+        <div class="legacy-grid">
+            <div class="history-card">
+                <h3>Providence & Law</h3>
+                <p>Aligning the **Young Politicians™** curriculum with the original constitutional framework of Pennsylvania. We teach youth that spiritual adherence is the foundation of civic order.</p>
+            </div>
+            <div class="history-card">
+                <h3>The 1776 Lifeline</h3>
+                <p>Reclaiming the streets of Philadelphia as a sanctuary for freedom. Our **Neighborhood Protection Patrols** are the modern-day Minutemen, defending the vision with both arms open.</p>
+            </div>
+            <div class="history-card">
+                <h3>Sovereign Citizenship</h3>
+                <p>Utilizing the **30% Profit-to-Mission** promise to fund the resurrection of the American Dream in our urban environments. Since we are in the position to lead, we follow the founders' footsteps.</p>
+            </div>
+        </div>
+
+        <div class="oath-banner">
+            <h2 style="font-family: 'Cinzel'; color: var(--gold-leaf); margin-bottom: 20px;">The Covenant of 1776</h2>
+            <p style="font-size: 1.2rem; line-height: 1.8;">
+                "Adhering to governmental laws is the highest form of patriotism. When we save the youth, we save the Republic. When we defend the city, we defend the world. Join the legacy. Establish your seed in the cradle of freedom."
+            </p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h4>The Testament</h4>
+            <ul>
+                <li><a href="index.html">The Founding Vision</a></li>
+                <li><a href="tier-viability.html">Covenant Protocols</a></li>
+                <li><a href="youth-resurrection.html">Youth Resurrection</a></li>
+                <li><a href="founding-fathers-legacy.html">Constitutional Roots</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>The Republic</h4>
+            <ul>
+                <li><a href="legal-compliance-audit.html">Compliance & Audits</a></li>
+                <li><a href="the-stewardship-charter.html">The Sovereign Charter</a></li>
+                <li><a href="partnerships.html">The Fellowship of 20</a></li>
+                <li><a href="global-stewardship-operations.html">Command & Control</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Tithe & Tribute</h4>
+            <ul>
+                <li><a href="tithe-and-tribute.html">Plant Your Seed</a></li>
+                <li><a href="corporate-covenant-registry.html">Prepco Dollar Registry</a></li>
+                <li><a href="the-founders-circle.html">The Founders Circle</a></li>
+                <li><a href="the-tabernacle-of-giving.html">The Giving Wall</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>The Infrastructure</h4>
+            <ul>
+                <li><a href="global-infrastructure-it.html">Technical Sovereignty</a></li>
+                <li><a href="lethal-ledger-broadcast-center.html">Lethal Ledger Media</a></li>
+                <li><a href="the-stewardship-impact-map.html">Impact Mapping</a></li>
+                <li><a href="stewardship-portal-login.html">Member Sanctuary</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="TBBLUSA Logo" class="footer-logo">
+        <p style="font-family: 'Cinzel'; font-size: 1.5rem; color: var(--gold-leaf); letter-spacing: 5px; margin-bottom: 10px;">TBBLUSA.ORG</p>
+        <p class="copyright-creed">ADHERENCE TO LAW IS THE FOUNDATION OF FREEDOM &copy; 2026 TBBLUSA FOUNDATION. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+
+</body>
+</html>
