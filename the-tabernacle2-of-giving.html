@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Tabernacle of Giving | Your Seed Fuels the Legal-Spiritual Bridge. A sacred space for Tithe and Tribute to the TBBLUSA Urban Resurrection.">
+    <meta name="keywords" content="Tithe and Tribute, Donate TBBLUSA, Philadelphia Nonprofit Donation, Faith-Based Urban Defense, Young Politicians Funding, Global Stewardship Trust">
+    <title>The Tabernacle of Giving | The Sacred Vessel | TBBLUSA.ORG</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold-leaf: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            --liturgical-blue: #0a192f;
+            --legal-black: #050505;
+            --marble-white: #f8f9fa;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background: url('https://www.transparenttextures.com/patterns/white-marble.png'), var(--marble-white);
+            color: var(--legal-black); 
+            line-height: 1.8; 
+            overflow-x: hidden;
+        }
+
+        /* 60PX PROFESSIONAL HEADER */
+        header {
+            background: var(--legal-black);
+            position: sticky; top: 0; z-index: 3000;
+            display: flex; justify-content: flex-end; align-items: center;
+            border-bottom: 4px solid var(--gold-leaf); height: 60px; padding: 0 5%;
+        }
+
+        .floating-logo-anchor { position: absolute; left: 5%; top: 0; height: 0; }
+        .floating-logo-anchor img { 
+            height: 320px; width: auto; 
+            filter: drop-shadow(0 0 15px var(--gold-glow));
+            animation: divine-glow 5s infinite ease-in-out;
+        }
+
+        @keyframes divine-glow {
+            0%, 100% { filter: drop-shadow(0 0 10px var(--gold-glow)); }
+            50% { filter: drop-shadow(0 0 25px var(--gold-leaf)); }
+        }
+
+        nav.top-nav { display: flex; gap: 30px; }
+        nav.top-nav a { 
+            color: white; text-decoration: none; font-weight: 700; 
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+            font-family: 'Cinzel', serif; transition: 0.4s;
+        }
+        nav.top-nav a:hover { color: var(--gold-leaf); text-shadow: 0 0 10px var(--gold-leaf); }
+
+        /* HERO: THE TABERNACLE VISTA */
+        .giving-hero {
+            padding: 280px 10% 120px;
+            background: linear-gradient(rgba(10, 25, 47, 0.96), rgba(10, 25, 47, 0.96)), url('stained-glass-giving.jpg');
+            background-attachment: fixed; background-size: cover; text-align: center;
+            border-bottom: 12px solid var(--gold-leaf);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+        }
+
+        h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; color: white; letter-spacing: 6px; }
+        .tabernacle-motto { font-family: 'Playfair Display', serif; color: var(--gold-leaf); font-size: 1.8rem; font-style: italic; margin-top: 15px; }
+
+        .tabernacle-container { max-width: 1200px; margin: -50px auto 100px; padding: 0 20px; position: relative; z-index: 10; }
+        
+        .invitation-scroll {
+            background: white;
+            border: 1px solid var(--gold-leaf);
+            padding: 80px 60px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        /* THE SACRED VESSEL (TITHING PLATE) */
+        .sacred-vessel-matrix {
+            position: relative;
+            margin: 60px 0;
+            padding: 40px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.2), rgba(0,0,0,0));
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+
+        /* Usher's Gloved Hands holding the Vessel */
+        .usher-hands-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: url('gloved-hands-tithing.png');
+            background-size: cover;
+            background-position: center;
+            pointer-events: none;
+            opacity: 0.1; /* SUBTLE LAYER */
+        }
+
+        /* TIER SELECTION GRID (INTERACTIVE COVENANT) */
+        .covenant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .covenant-arch {
+            background: var(--marble-white);
+            border: 1px solid #ddd;
+            padding: 40px 20px;
+            text-align: center;
+            transition: 0.5s;
+            border-radius: 150px 150px 0 0;
+            cursor: pointer;
+            text-decoration: none; /* LINK FIX */
+            color: inherit;
+        }
+
+        .covenant-arch:hover { 
+            transform: translateY(-10px); 
+            background: white;
+            border-color: var(--gold-leaf);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+        }
+
+        .covenant-arch h3 { font-family: 'Cinzel', serif; letter-spacing: 2px; font-size: 1.1rem; color: var(--liturgical-blue); }
+        .covenant-divider { width: 40px; height: 3px; background: var(--gold-leaf); margin: 15px auto; }
+        .investment { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--gold-leaf); }
+        .pillar-desc { font-size: 0.85rem; margin-top: 10px; color: #444; text-transform: uppercase; }
+
+        /* THE LEDGER BANNER (TECHNICAL TRUST) */
+        .ledger-banner {
+            background: var(--legal-black);
+            color: var(--gold-leaf);
+            padding: 60px;
+            margin-top: 80px;
+            text-align: center;
+            border: 2px solid var(--gold-leaf);
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+        }
+
+        .ledger-banner h2 { font-family: 'Cinzel'; margin-bottom: 20px; font-size: 2rem; }
+        .ledger-banner p { font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px; font-family: 'Playfair Display'; font-style: italic; color: #ccc;}
+
+        .tribute-btn {
+            background: transparent;
+            color: var(--gold-leaf);
+            padding: 20px 60px;
+            font-family: 'Cinzel';
+            font-weight: 900;
+            letter-spacing: 5px;
+            border: 2px solid var(--gold-leaf);
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .tribute-btn:hover { background: var(--gold-leaf); color: var(--legal-black); }
+
+        footer {
+            background: var(--legal-black);
+            color: white;
+            padding: 100px 10% 40px;
+            border-top: 15px solid var(--gold-leaf);
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="floating-logo-anchor"><img src="COME TO CHRIST TBBLUSA.ORG.png" alt="COME TO CHRIST Logo"></div>
+    <nav class="top-nav">
+        <a href="index.html">The Testament</a>
+        <a href="urban-initiatives.html">Urban Engagement</a>
+        <a href="partnerships.html">Governance</a>
+        <a href="the-tabernacle-of-giving.html" style="color: var(--gold-leaf);">Giving Wall</a>
+    </nav>
+</header>
+
+<section class="giving-hero">
+    <h1>THE TABERNACLE OF GIVING</h1>
+    <p class="tabernacle-motto">"Where Your Seed Fuels the Resurrection of the Republic."</p>
+</section>
+
+<div class="tabernacle-container">
+    <div class="invitation-scroll">
+        <h2 style="font-family: 'Cinzel'; text-align: center; font-size: 2.2rem; color: var(--liturgical-blue);">The Fellowship of the Offering</h2>
+        
+        <p style="margin-top: 30px; font-size: 1.1rem; text-align: center; font-style: italic; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 2;">
+            "We have learned from the furnace of the streets that the most critical element required to save the urban environment is a solid lifeline. The Tabernacle of Giving is not a traditional charity; it is a technical and spiritual sanctuary where your money becomes a vessel for urban defense, legislative resurrection, and the salvation of Philadelphia. Since we are in the position to lead, we welcome your seed with both arms open."
+        </p>
+
+        <div class="sacred-vessel-matrix">
+            <div class="usher-hands-overlay"></div>
+            <p style="font-family: 'Cinzel'; font-weight: 900; color: var(--gold-leaf); letter-spacing: 5px;">THE SACRED VESSEL OF ADHERENCE</p>
+            
+            <div class="covenant-grid">
+                <a href="tier-viability.html#solid-ground" class="covenant-arch">
+                    <h3>SOLID GROUND</h3>
+                    <div class="covenant-divider"></div>
+                    <p class="investment">$5 - $50</p>
+                    <p class="pillar-desc">Community Fellowship</p>
+                </a>
+
+                <a href="tier-viability.html#civic-leader" class="covenant-arch">
+                    <h3>CIVIC LEADER</h3>
+                    <div class="covenant-divider"></div>
+                    <p class="investment">$100 - $200</p>
+                    <p class="pillar-desc">Advocacy & Engagement</p>
+                </a>
+
+                <a href="the-stewardship-charter.html" class="covenant-arch">
+                    <h3>STEWARD</h3>
+                    <div class="covenant-divider"></div>
+                    <p class="investment">$300 - $500</p>
+                    <p class="pillar-desc">Governance & Oversight</p>
+                </a>
+
+                <a href="youth-resurrection.html" class="covenant-arch">
+                    <h3>KINGDOM PILLAR</h3>
+                    <div class="covenant-divider"></div>
+                    <p class="investment">$1,000+</p>
+                    <p class="pillar-desc">Expansion & Leadership</p>
+                </a>
+
+                <a href="legal-compliance-audit.html" class="covenant-arch">
+                    <h3>GUARDIAN</h3>
+                    <div class="covenant-divider"></div>
+                    <p class="investment">$5,000+</p>
+                    <p class="pillar-desc">Republic Defense</p>
+                </a>
+
+                <a href="the-founders-circle.html" class="covenant-arch">
+                    <h3>WORLD ARCHITECT</h3>
+                    <div class="covenant-divider"></div>
+                    <p class="investment">UNLIMITED</p>
+                    <p class="pillar-desc">Global Lifeline</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="ledger-banner">
+            <h2>The Unbroken Ledger</h2>
+            <p>"Adhering to the Law is the highest form of stewardship. When you plant your seed in the Tabernacle, you are investing in a verified urban lifeline, backed by our technical sovereignty and legal integrity. Give, and it shall be given unto you."</p>
+            <button class="tribute-btn">Plant Your Seed Now</button>
+        </div>
+
+        <p style="text-align: center; margin-top: 60px; font-family: 'Cinzel'; color: var(--liturgical-blue); letter-spacing: 5px; font-weight: 700;">
+            ESTABLISH YOUR COVENANT IN THE Cradle OF FREEDOM.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h4>The Testament</h4>
+            <ul>
+                <li><a href="index.html">The Founding Vision</a></li>
+                <li><a href="tier-viability.html">Covenant Protocols</a></li>
+                <li><a href="youth-resurrection.html">Youth Resurrection</a></li>
+                <li><a href="founding-fathers-legacy.html">Constitutional Roots</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>The Republic</h4>
+            <ul>
+                <li><a href="legal-compliance-audit.html">Compliance & Audits</a></li>
+                <li><a href="the-stewardship-charter.html">The Sovereign Charter</a></li>
+                <li><a href="partnerships.html">The Fellowship of 20</a></li>
+                <li><a href="global-stewardship-operations.html">Command & Control</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Tithe & Tribute</h4>
+            <ul>
+                <li><a href="tithe-and-tribute.html">Plant Your Seed</a></li>
+                <li><a href="corporate-covenant-registry.html">Prepco Dollar Registry</a></li>
+                <li><a href="the-founders-circle.html">The Founders Circle</a></li>
+                <li><a href="the-tabernacle-of-giving.html">The Giving Wall</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>The Infrastructure</h4>
+            <ul>
+                <li><a href="global-infrastructure-it.html">Technical Sovereignty</a></li>
+                <li><a href="lethal-ledger-broadcast-center.html">Lethal Ledger Media</a></li>
+                <li><a href="the-stewardship-impact-map.html">Impact Mapping</a></li>
+                <li><a href="stewardship-portal-login.html">Member Sanctuary</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <img src="COME TO CHRIST TBBLUSA.ORG.png" alt="TBBLUSA Logo" class="footer-logo">
+        <p style="font-family: 'Cinzel'; font-size: 1.5rem; color: var(--gold-leaf); letter-spacing: 5px; margin-bottom: 10px;">TBBLUSA.ORG</p>
+        <p class="copyright-creed">ADHERENCE TO LAW IS THE FOUNDATION OF FREEDOM &copy; 2026 TBBLUSA FOUNDATION. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+
+</body>
+</html>
